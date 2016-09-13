@@ -1,10 +1,14 @@
-olid](https://cldup.com/dTxpPi9lDf.thumb.png)
+### Class
 
-iOS Developer 
+### HomeWork
 
-  - Objective-C
-  - Swift
-  - Java
+### Group_Study
+
+### Quiz
+
+### Sample
+
+
 
 ### Tech
 
@@ -16,11 +20,6 @@ iOS Developer / Back-end / Front-end
 * [C] 
 * [JSP]
 * [Javascript] 
-
-
-#### GitHub
-
-[My github](https:www.github.com/jakouk)
 
 License
 ----
