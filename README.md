@@ -10,7 +10,7 @@
 - Day7. Command Git
 
 **Objective-C**
-- Day8.
+- Day8. Xcode & Class & Comment
 
 **iOS Frame Work**
 
