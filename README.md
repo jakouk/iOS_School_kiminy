@@ -1,4 +1,4 @@
-#### Class
+### Class
 **Computer Thinking**
 
 - Day1. 컴퓨터 역사 & 컴퓨터 구조
