@@ -10,7 +10,7 @@
 - Day7. Command Git
 
 **Objective-C**
-- Day8. Xcode & Class & Comment
+- [Day8. Xcode & Class & Comment](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day8_Xcode_class_comment.md)
 
 **iOS Frame Work**
 

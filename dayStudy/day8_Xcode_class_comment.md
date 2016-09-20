@@ -1,12 +1,11 @@
 #### **Day8. Xcode & Class & Comment**
-템플릿 -> 도구들을 모아놓은 것
-identifier -> url을 거꾸로 치는 경우가 많음
-Use Core Data -> 앱내부에 있는 DB사용
-Include Unit Tests -> UI 테스트
-Include UI Tests -> 테스트 주도 개발 ( TDD)
-
+ 
 ##### **Xcode**
-
+- 템플릿 -> 도구들을 모아놓은 것
+- identifier -> url을 거꾸로 쓰는 경우가 많음
+- Use Core Data -> 앱내부에 있는  DB사용
+- Include Unit Tests -> UI 테스트
+- Include UI Tests -> 테스트 주도 개발 ( TDD )
 - Navigator : 프로젝트 관리를 위한 도구모음
 - Editor : Project Navigator 에서 선택한 파일의 내용을 수정하는 화면
 - Debug Area : 프로그램 실행 중 Debuging를 위한 콘솔창
