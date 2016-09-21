@@ -11,6 +11,7 @@
 
 **Objective-C**
 - [Day8. Xcode & Class & Comment](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day8_Xcode_class_comment.md)
+- [Day9. Object & Quick Help & Naming](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day9_object_quickHelp_naming.md)
 
 **iOS Frame Work**
 
