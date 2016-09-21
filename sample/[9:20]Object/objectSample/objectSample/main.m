@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "band.h"
 #import "Slack.h"
+#import "Facebook.h"
 
 int main(int argc, const char * argv[]) {
     
@@ -40,6 +41,15 @@ int main(int argc, const char * argv[]) {
     [user4 inviteUser:user3.userEmail
          userNickName:user3.userNickName];
     
+    Facebook *user5 = [[Facebook alloc]init];
+    
+    user5.userName = @"kiminy";
+    user5.userId = @"karia";
+    user5.userPhone = @"010-3424-3234";
+    
+    [user5 friendConnect:user5.userName
+                firendId:user5.userId
+             firendPhone:user5.userPhone];
     
     return 0;
 }

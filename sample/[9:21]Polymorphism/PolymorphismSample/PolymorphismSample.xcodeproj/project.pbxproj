@@ -7,14 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7302CF5C1D921020002505D6 /* Facebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 7302CF5B1D921020002505D6 /* Facebook.m */; };
-		7309F7CA1D9148F00097147B /* Band.m in Sources */ = {isa = PBXBuildFile; fileRef = 7309F7C91D9148F00097147B /* Band.m */; };
-		7309F7CD1D91549C0097147B /* Slack.m in Sources */ = {isa = PBXBuildFile; fileRef = 7309F7CC1D91549C0097147B /* Slack.m */; };
-		73B6A3351D9128D1005F3E4A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B6A3341D9128D1005F3E4A /* main.m */; };
+		7302CF831D926904002505D6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7302CF821D926904002505D6 /* main.m */; };
+		7302CF8B1D926917002505D6 /* Cat.m in Sources */ = {isa = PBXBuildFile; fileRef = 7302CF8A1D926917002505D6 /* Cat.m */; };
+		7302CF8E1D92692A002505D6 /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = 7302CF8D1D92692A002505D6 /* Dog.m */; };
+		7302CF911D926939002505D6 /* Bird.m in Sources */ = {isa = PBXBuildFile; fileRef = 7302CF901D926939002505D6 /* Bird.m */; };
+		7302CF941D926944002505D6 /* Horse.m in Sources */ = {isa = PBXBuildFile; fileRef = 7302CF931D926944002505D6 /* Horse.m */; };
+		7302CF971D926950002505D6 /* Mouse.m in Sources */ = {isa = PBXBuildFile; fileRef = 7302CF961D926950002505D6 /* Mouse.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		73B6A32F1D9128D1005F3E4A /* CopyFiles */ = {
+		7302CF7D1D926904002505D6 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -26,18 +28,22 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		7302CF5A1D921020002505D6 /* Facebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Facebook.h; sourceTree = "<group>"; };
-		7302CF5B1D921020002505D6 /* Facebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Facebook.m; sourceTree = "<group>"; };
-		7309F7C81D9148F00097147B /* Band.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Band.h; sourceTree = "<group>"; };
-		7309F7C91D9148F00097147B /* Band.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Band.m; sourceTree = "<group>"; };
-		7309F7CB1D91549C0097147B /* Slack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Slack.h; sourceTree = "<group>"; };
-		7309F7CC1D91549C0097147B /* Slack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Slack.m; sourceTree = "<group>"; };
-		73B6A3311D9128D1005F3E4A /* objectSample */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = objectSample; sourceTree = BUILT_PRODUCTS_DIR; };
-		73B6A3341D9128D1005F3E4A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7302CF7F1D926904002505D6 /* PolymorphismSample */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PolymorphismSample; sourceTree = BUILT_PRODUCTS_DIR; };
+		7302CF821D926904002505D6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7302CF891D926917002505D6 /* Cat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cat.h; sourceTree = "<group>"; };
+		7302CF8A1D926917002505D6 /* Cat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cat.m; sourceTree = "<group>"; };
+		7302CF8C1D92692A002505D6 /* Dog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dog.h; sourceTree = "<group>"; };
+		7302CF8D1D92692A002505D6 /* Dog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dog.m; sourceTree = "<group>"; };
+		7302CF8F1D926939002505D6 /* Bird.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bird.h; sourceTree = "<group>"; };
+		7302CF901D926939002505D6 /* Bird.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bird.m; sourceTree = "<group>"; };
+		7302CF921D926944002505D6 /* Horse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Horse.h; sourceTree = "<group>"; };
+		7302CF931D926944002505D6 /* Horse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Horse.m; sourceTree = "<group>"; };
+		7302CF951D926950002505D6 /* Mouse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mouse.h; sourceTree = "<group>"; };
+		7302CF961D926950002505D6 /* Mouse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mouse.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		73B6A32E1D9128D1005F3E4A /* Frameworks */ = {
+		7302CF7C1D926904002505D6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -47,104 +53,110 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		73B6A3281D9128D1005F3E4A = {
+		7302CF761D926904002505D6 = {
 			isa = PBXGroup;
 			children = (
-				73B6A3331D9128D1005F3E4A /* objectSample */,
-				73B6A3321D9128D1005F3E4A /* Products */,
+				7302CF811D926904002505D6 /* PolymorphismSample */,
+				7302CF801D926904002505D6 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		73B6A3321D9128D1005F3E4A /* Products */ = {
+		7302CF801D926904002505D6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				73B6A3311D9128D1005F3E4A /* objectSample */,
+				7302CF7F1D926904002505D6 /* PolymorphismSample */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		73B6A3331D9128D1005F3E4A /* objectSample */ = {
+		7302CF811D926904002505D6 /* PolymorphismSample */ = {
 			isa = PBXGroup;
 			children = (
-				73B6A3341D9128D1005F3E4A /* main.m */,
-				7309F7C81D9148F00097147B /* Band.h */,
-				7309F7C91D9148F00097147B /* Band.m */,
-				7309F7CB1D91549C0097147B /* Slack.h */,
-				7309F7CC1D91549C0097147B /* Slack.m */,
-				7302CF5A1D921020002505D6 /* Facebook.h */,
-				7302CF5B1D921020002505D6 /* Facebook.m */,
+				7302CF821D926904002505D6 /* main.m */,
+				7302CF8F1D926939002505D6 /* Bird.h */,
+				7302CF901D926939002505D6 /* Bird.m */,
+				7302CF891D926917002505D6 /* Cat.h */,
+				7302CF8A1D926917002505D6 /* Cat.m */,
+				7302CF8C1D92692A002505D6 /* Dog.h */,
+				7302CF8D1D92692A002505D6 /* Dog.m */,
+				7302CF921D926944002505D6 /* Horse.h */,
+				7302CF931D926944002505D6 /* Horse.m */,
+				7302CF951D926950002505D6 /* Mouse.h */,
+				7302CF961D926950002505D6 /* Mouse.m */,
 			);
-			path = objectSample;
+			path = PolymorphismSample;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		73B6A3301D9128D1005F3E4A /* objectSample */ = {
+		7302CF7E1D926904002505D6 /* PolymorphismSample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 73B6A3381D9128D1005F3E4A /* Build configuration list for PBXNativeTarget "objectSample" */;
+			buildConfigurationList = 7302CF861D926904002505D6 /* Build configuration list for PBXNativeTarget "PolymorphismSample" */;
 			buildPhases = (
-				73B6A32D1D9128D1005F3E4A /* Sources */,
-				73B6A32E1D9128D1005F3E4A /* Frameworks */,
-				73B6A32F1D9128D1005F3E4A /* CopyFiles */,
+				7302CF7B1D926904002505D6 /* Sources */,
+				7302CF7C1D926904002505D6 /* Frameworks */,
+				7302CF7D1D926904002505D6 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = objectSample;
-			productName = objectSample;
-			productReference = 73B6A3311D9128D1005F3E4A /* objectSample */;
+			name = PolymorphismSample;
+			productName = PolymorphismSample;
+			productReference = 7302CF7F1D926904002505D6 /* PolymorphismSample */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		73B6A3291D9128D1005F3E4A /* Project object */ = {
+		7302CF771D926904002505D6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = jakouk;
 				TargetAttributes = {
-					73B6A3301D9128D1005F3E4A = {
+					7302CF7E1D926904002505D6 = {
 						CreatedOnToolsVersion = 8.0;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 73B6A32C1D9128D1005F3E4A /* Build configuration list for PBXProject "objectSample" */;
+			buildConfigurationList = 7302CF7A1D926904002505D6 /* Build configuration list for PBXProject "PolymorphismSample" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 73B6A3281D9128D1005F3E4A;
-			productRefGroup = 73B6A3321D9128D1005F3E4A /* Products */;
+			mainGroup = 7302CF761D926904002505D6;
+			productRefGroup = 7302CF801D926904002505D6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				73B6A3301D9128D1005F3E4A /* objectSample */,
+				7302CF7E1D926904002505D6 /* PolymorphismSample */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		73B6A32D1D9128D1005F3E4A /* Sources */ = {
+		7302CF7B1D926904002505D6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7309F7CD1D91549C0097147B /* Slack.m in Sources */,
-				7309F7CA1D9148F00097147B /* Band.m in Sources */,
-				73B6A3351D9128D1005F3E4A /* main.m in Sources */,
-				7302CF5C1D921020002505D6 /* Facebook.m in Sources */,
+				7302CF8E1D92692A002505D6 /* Dog.m in Sources */,
+				7302CF941D926944002505D6 /* Horse.m in Sources */,
+				7302CF8B1D926917002505D6 /* Cat.m in Sources */,
+				7302CF971D926950002505D6 /* Mouse.m in Sources */,
+				7302CF911D926939002505D6 /* Bird.m in Sources */,
+				7302CF831D926904002505D6 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		73B6A3361D9128D1005F3E4A /* Debug */ = {
+		7302CF841D926904002505D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -191,7 +203,7 @@
 			};
 			name = Debug;
 		};
-		73B6A3371D9128D1005F3E4A /* Release */ = {
+		7302CF851D926904002505D6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -231,14 +243,14 @@
 			};
 			name = Release;
 		};
-		73B6A3391D9128D1005F3E4A /* Debug */ = {
+		7302CF871D926904002505D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		73B6A33A1D9128D1005F3E4A /* Release */ = {
+		7302CF881D926904002505D6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -248,25 +260,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		73B6A32C1D9128D1005F3E4A /* Build configuration list for PBXProject "objectSample" */ = {
+		7302CF7A1D926904002505D6 /* Build configuration list for PBXProject "PolymorphismSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				73B6A3361D9128D1005F3E4A /* Debug */,
-				73B6A3371D9128D1005F3E4A /* Release */,
+				7302CF841D926904002505D6 /* Debug */,
+				7302CF851D926904002505D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		73B6A3381D9128D1005F3E4A /* Build configuration list for PBXNativeTarget "objectSample" */ = {
+		7302CF861D926904002505D6 /* Build configuration list for PBXNativeTarget "PolymorphismSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				73B6A3391D9128D1005F3E4A /* Debug */,
-				73B6A33A1D9128D1005F3E4A /* Release */,
+				7302CF871D926904002505D6 /* Debug */,
+				7302CF881D926904002505D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 73B6A3291D9128D1005F3E4A /* Project object */;
+	rootObject = 7302CF771D926904002505D6 /* Project object */;
 }
