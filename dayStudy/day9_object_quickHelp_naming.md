@@ -31,13 +31,18 @@ framework에서 가져온것은 < >를 사용한다.
 <외부이름>:(<타입>)
 
 - 선언부
-```@interface Person : NSObject
-@end```
+```
+@interface Person : NSObject
+
+@end
+```
 
 - 구현부
-```@implimentation Person
-@end```
+```
+@implimentation Person
 
+@end
+```
 - 메서드
 ```-(id)runTO : (id)localtion byspeed:(id)speed with:(id)someone```
 이런 식으로 사용된다.
@@ -68,8 +73,8 @@ framework에서 가져온것은 < >를 사용한다.
 ##### 퀵헬프 주석
 
 - 클래스를 퀵헬프에 등록하는 주석
-
-```/**
+```
+/**
 * 싸움을 위해 탄생한 전사
 * 힘이세고 마법력이 약합니다
 * 체력이 높고 마력이 낮습니다.
@@ -77,20 +82,23 @@ framework에서 가져온것은 < >를 사용한다.
 * @author yagom
 *@version 0.1
 */
-@interface Warrior : NSObject```
+@interface Warrior : NSObject
+```
 
 - 프로퍼티를 퀵헬프에 등록하는 주석
-
-```/// 이름
-@property NSInteger health;```
+```
+/// 이름
+@property NSInteger health;
+```
 
 - 메서드는 퀵헬프에 등록하는 주석
-
-```/**
+``` 
+/**
 *to에게 물리 공격을 가합니다.
 * @param to 공격을 당할 대상
 * @return 반환은 나중에 배웁니다.
 * @author yagom
 * @version0.1
 */
-- (id)physicalAttack:(Wizard *)to;```
+- (id)physicalAttack:(Wizard *)to;
+```
