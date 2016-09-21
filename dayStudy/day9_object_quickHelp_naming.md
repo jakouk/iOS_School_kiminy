@@ -39,7 +39,7 @@ framework에서 가져온것은 < >를 사용한다.
 
 - 구현부
 ``` objective-c
-@implimentation Person
+@implementation Person
 
 @end
 ```
