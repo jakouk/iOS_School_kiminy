@@ -31,20 +31,22 @@ framework에서 가져온것은 < >를 사용한다.
 <외부이름>:(<타입>)
 
 - 선언부
-```
+``` objective-c
 @interface Person : NSObject
 
 @end
 ```
 
 - 구현부
-```
+``` objective-c
 @implimentation Person
 
 @end
 ```
 - 메서드
-```-(id)runTO : (id)localtion byspeed:(id)speed with:(id)someone```
+``` objective-c
+-(id)runTO : (id)localtion byspeed:(id)speed with:(id)someone
+```
 이런 식으로 사용된다.
 
 - 클래스생성 & 객체생성
@@ -73,7 +75,7 @@ framework에서 가져온것은 < >를 사용한다.
 ##### 퀵헬프 주석
 
 - 클래스를 퀵헬프에 등록하는 주석
-```
+``` objective-c
 /**
 * 싸움을 위해 탄생한 전사
 * 힘이세고 마법력이 약합니다
@@ -86,13 +88,13 @@ framework에서 가져온것은 < >를 사용한다.
 ```
 
 - 프로퍼티를 퀵헬프에 등록하는 주석
-```
+``` objective-c
 /// 이름
 @property NSInteger health;
 ```
 
 - 메서드는 퀵헬프에 등록하는 주석
-``` 
+``` objective-c
 /**
 *to에게 물리 공격을 가합니다.
 * @param to 공격을 당할 대상
