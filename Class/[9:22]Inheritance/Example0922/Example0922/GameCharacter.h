@@ -17,6 +17,28 @@
 
 @interface GameCharacter : NSObject
 
+///체력
+@property (readonly) NSInteger health;
+
+///마나
+@property (readonly) NSInteger mana;
+
+///물리공격력
+@property (readonly) NSInteger physicalPower;
+
+///마법공격력
+@property (readonly) NSInteger magicalPower;
+
+///생존여부
+@property (readonly) BOOL isDead;
+
+///이름
+@property (readonly) NSString *name;
+
+///무기
+@property (readonly) NSString *weapon;
+
+
 /**
  * 누군가를 공격하는 물리 공격력
  * @param someone 공격할 대상

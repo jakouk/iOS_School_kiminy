@@ -11,7 +11,7 @@
 @implementation Chicken
 
 -(id)cry:(Animal *)soundKind{
-    NSLog(@"%@은 이렇게 웁니다. 꼬끼오",self.name,soundKind.crySound);
+    NSLog(@"%@은 이렇게 웁니다. %@",self.name,soundKind.crySound);
     return nil;
 }
 
