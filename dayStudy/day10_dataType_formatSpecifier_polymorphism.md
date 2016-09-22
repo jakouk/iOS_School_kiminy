@@ -20,13 +20,17 @@ BOOL isBabyCute = YES;
 
 정수
 - 부호가 있는 정수 : NSInteger
+
 ``` 0bjective-c
 NSInteger temperature = 100;
 ```
+
 - 부호가 없는 정수 : NSUInteger
+
 ``` objective-c
 NSUInteger health = 100;
 ```
+
 - Objective-C에서는 int를 사용하지 않습니다. ( 사용하지 않는 이유는 64비트 )
 
 실수
@@ -34,9 +38,11 @@ NSUInteger health = 100;
 - 32bit 실수 표현 :float
 - 64bit 실수 표현 : double
 - Core Graphic용 실수 표현 : CGFloat
-``` objective -c
+
+``` objective-c
 CGFloat weight = 33.5;
 ```
+
 숫자객체형
 - NSNumber ( 클래스 이다 )
 - @뒤에 숫자를 써 주었던은 숫자를 객체로 사용한 것
@@ -44,23 +50,31 @@ CGFloat weight = 33.5;
 - Value Type을 직접 표현할 떄에는 포인터를 사용하지 않는다.
 - Reference Type을 표현할 때에는 포인터를 사용한다.
 - 서로 같은 의미이고 아래가 축약형이다.
-``` objective -c
+
+``` objective-c
+
 NSNumber *mana = [ [ NSNumber alloc ] initWithInt:100];
 NSNumber *mana = @100;
+
 ```
 
 ###### 문자 표현
 문자
 - 단하나의 문자를 표현 : char [ Value Type]
-``` objective -c
+
+``` objective-c
 char word = ‘a’;
 ```
 
 문자열
 - 문장 또는 문단의 표현 : NSString [Reference Type];
-``` objective-c
+
+```objective-c
+
 NSString *name = [ [ NSString alloc ] initWithUTF8String:”kiminy"];
+
 ```
+
 ###### 객체타입
 - 프로퍼티 또는 매개변수의 데이터 타입을 명시해 준 경우, 다른 타입의 값이 할당되거나 전달이 된다면 오류가 발생 가능
 - id 는 모든 객체타입을 의미한다.
@@ -80,6 +94,7 @@ NSString *name = [ [ NSString alloc ] initWithUTF8String:”kiminy"];
 - %o = 8진수 변환시 사용
 - %lf = 실수표현시 사용
 - %s = 문자열시 사용
+
 ``` objective-c
 NSLog(@“부호가 있는 정수 : %ld”,-123);
 NSLog(@“부동수소 : %lf”,10.24f)
