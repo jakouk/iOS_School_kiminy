@@ -115,7 +115,7 @@ Person *mili = [ [ Person alloc ] init ];
 self
 
 - 객체 스스로 자신을 지징할 때 사용하는  키워드
-- 
+
 //자신의 메서드 호출
 [self someMethod:value];
 
