@@ -15,4 +15,9 @@
     return nil;
 }
 
+-(id)study:(NSString *)subject{
+    NSLog(@"선생님들도 계속해서 바뀌는 것이 있기때문에 %@를 공부한다.",subject);
+    return nil;
+}
+
 @end

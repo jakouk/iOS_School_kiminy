@@ -27,5 +27,6 @@
  */
 -(id)adopt:(Animal *)animalName;
 
+-(id)study:(NSString *)subject;
 
 @end

@@ -56,6 +56,7 @@
 }
 
 -(id)jumpTo:(NSString *)someWhere{
+    
     NSLog(@"전사가 %@(으)로 이동하였습니다.",someWhere);
     return nil;
 }

@@ -26,4 +26,9 @@
     return nil;
 }
 
+-(id)study:(NSString *)subject{
+    NSLog(@"취업을 위해서 %@을 공부한다 대학생은 ",subject);
+    return nil;
+}
+
 @end

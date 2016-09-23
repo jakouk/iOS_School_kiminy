@@ -26,4 +26,9 @@
     return nil;
 }
 
+-(id)study:(NSString *)subject{
+    NSLog(@"학생은 %@과목을 공부했다",subject);
+    return nil;
+}
+
 @end

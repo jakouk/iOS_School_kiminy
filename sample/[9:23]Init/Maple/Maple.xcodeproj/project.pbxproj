@@ -1,0 +1,327 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		730218F51D94E75900EFB42F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 730218F41D94E75900EFB42F /* main.m */; };
+		730218FD1D94E7B800EFB42F /* Maple.m in Sources */ = {isa = PBXBuildFile; fileRef = 730218FC1D94E7B800EFB42F /* Maple.m */; };
+		730219001D94E7CB00EFB42F /* Map.m in Sources */ = {isa = PBXBuildFile; fileRef = 730218FF1D94E7CB00EFB42F /* Map.m */; };
+		730219041D94E7F400EFB42F /* Monster.m in Sources */ = {isa = PBXBuildFile; fileRef = 730219031D94E7F400EFB42F /* Monster.m */; };
+		730219081D94E80700EFB42F /* GameClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 730219071D94E80700EFB42F /* GameClass.m */; };
+		7302190C1D94EBB400EFB42F /* Weapon.m in Sources */ = {isa = PBXBuildFile; fileRef = 7302190B1D94EBB400EFB42F /* Weapon.m */; };
+		730219101D94F08A00EFB42F /* Beginner.m in Sources */ = {isa = PBXBuildFile; fileRef = 7302190F1D94F08A00EFB42F /* Beginner.m */; };
+		730219131D94FC9200EFB42F /* Slaim.m in Sources */ = {isa = PBXBuildFile; fileRef = 730219121D94FC9200EFB42F /* Slaim.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		730218EF1D94E75900EFB42F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		730218F11D94E75900EFB42F /* Maple */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Maple; sourceTree = BUILT_PRODUCTS_DIR; };
+		730218F41D94E75900EFB42F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		730218FB1D94E7B800EFB42F /* Maple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Maple.h; sourceTree = "<group>"; };
+		730218FC1D94E7B800EFB42F /* Maple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Maple.m; sourceTree = "<group>"; };
+		730218FE1D94E7CB00EFB42F /* Map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Map.h; sourceTree = "<group>"; };
+		730218FF1D94E7CB00EFB42F /* Map.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Map.m; sourceTree = "<group>"; };
+		730219021D94E7F400EFB42F /* Monster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Monster.h; sourceTree = "<group>"; };
+		730219031D94E7F400EFB42F /* Monster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Monster.m; sourceTree = "<group>"; };
+		730219061D94E80700EFB42F /* GameClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameClass.h; sourceTree = "<group>"; };
+		730219071D94E80700EFB42F /* GameClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameClass.m; sourceTree = "<group>"; };
+		7302190A1D94EBB400EFB42F /* Weapon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Weapon.h; sourceTree = "<group>"; };
+		7302190B1D94EBB400EFB42F /* Weapon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weapon.m; sourceTree = "<group>"; };
+		7302190E1D94F08A00EFB42F /* Beginner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Beginner.h; sourceTree = "<group>"; };
+		7302190F1D94F08A00EFB42F /* Beginner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Beginner.m; sourceTree = "<group>"; };
+		730219111D94FC9200EFB42F /* Slaim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Slaim.h; sourceTree = "<group>"; };
+		730219121D94FC9200EFB42F /* Slaim.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Slaim.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		730218EE1D94E75900EFB42F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		730218E81D94E75900EFB42F = {
+			isa = PBXGroup;
+			children = (
+				730218F31D94E75900EFB42F /* Maple */,
+				730218F21D94E75900EFB42F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		730218F21D94E75900EFB42F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				730218F11D94E75900EFB42F /* Maple */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		730218F31D94E75900EFB42F /* Maple */ = {
+			isa = PBXGroup;
+			children = (
+				730218F41D94E75900EFB42F /* main.m */,
+				730218FB1D94E7B800EFB42F /* Maple.h */,
+				730218FC1D94E7B800EFB42F /* Maple.m */,
+				7302190D1D94EBC100EFB42F /* Weapon */,
+				730219091D94E80B00EFB42F /* GameClass */,
+				730219051D94E7F900EFB42F /* Monster */,
+				730219011D94E7DD00EFB42F /* Map */,
+			);
+			path = Maple;
+			sourceTree = "<group>";
+		};
+		730219011D94E7DD00EFB42F /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				730218FE1D94E7CB00EFB42F /* Map.h */,
+				730218FF1D94E7CB00EFB42F /* Map.m */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
+		730219051D94E7F900EFB42F /* Monster */ = {
+			isa = PBXGroup;
+			children = (
+				730219021D94E7F400EFB42F /* Monster.h */,
+				730219031D94E7F400EFB42F /* Monster.m */,
+				730219111D94FC9200EFB42F /* Slaim.h */,
+				730219121D94FC9200EFB42F /* Slaim.m */,
+			);
+			name = Monster;
+			sourceTree = "<group>";
+		};
+		730219091D94E80B00EFB42F /* GameClass */ = {
+			isa = PBXGroup;
+			children = (
+				730219061D94E80700EFB42F /* GameClass.h */,
+				730219071D94E80700EFB42F /* GameClass.m */,
+				7302190E1D94F08A00EFB42F /* Beginner.h */,
+				7302190F1D94F08A00EFB42F /* Beginner.m */,
+			);
+			name = GameClass;
+			sourceTree = "<group>";
+		};
+		7302190D1D94EBC100EFB42F /* Weapon */ = {
+			isa = PBXGroup;
+			children = (
+				7302190A1D94EBB400EFB42F /* Weapon.h */,
+				7302190B1D94EBB400EFB42F /* Weapon.m */,
+			);
+			name = Weapon;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		730218F01D94E75900EFB42F /* Maple */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 730218F81D94E75900EFB42F /* Build configuration list for PBXNativeTarget "Maple" */;
+			buildPhases = (
+				730218ED1D94E75900EFB42F /* Sources */,
+				730218EE1D94E75900EFB42F /* Frameworks */,
+				730218EF1D94E75900EFB42F /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Maple;
+			productName = Maple;
+			productReference = 730218F11D94E75900EFB42F /* Maple */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		730218E91D94E75900EFB42F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = jakouk;
+				TargetAttributes = {
+					730218F01D94E75900EFB42F = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 730218EC1D94E75900EFB42F /* Build configuration list for PBXProject "Maple" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 730218E81D94E75900EFB42F;
+			productRefGroup = 730218F21D94E75900EFB42F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				730218F01D94E75900EFB42F /* Maple */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		730218ED1D94E75900EFB42F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				730219131D94FC9200EFB42F /* Slaim.m in Sources */,
+				730219041D94E7F400EFB42F /* Monster.m in Sources */,
+				730219001D94E7CB00EFB42F /* Map.m in Sources */,
+				730218F51D94E75900EFB42F /* main.m in Sources */,
+				730219101D94F08A00EFB42F /* Beginner.m in Sources */,
+				7302190C1D94EBB400EFB42F /* Weapon.m in Sources */,
+				730219081D94E80700EFB42F /* GameClass.m in Sources */,
+				730218FD1D94E7B800EFB42F /* Maple.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		730218F61D94E75900EFB42F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		730218F71D94E75900EFB42F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		730218F91D94E75900EFB42F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		730218FA1D94E75900EFB42F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		730218EC1D94E75900EFB42F /* Build configuration list for PBXProject "Maple" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				730218F61D94E75900EFB42F /* Debug */,
+				730218F71D94E75900EFB42F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		730218F81D94E75900EFB42F /* Build configuration list for PBXNativeTarget "Maple" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				730218F91D94E75900EFB42F /* Debug */,
+				730218FA1D94E75900EFB42F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 730218E91D94E75900EFB42F /* Project object */;
+}

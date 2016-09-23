@@ -20,4 +20,9 @@
     return nil;
 }
 
+-(id)study:(NSString *)subject{
+    NSLog(@"사람은 %@를 공부하는 것은 인생에 필요해서다");
+    return nil;
+}
+
 @end
