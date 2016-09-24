@@ -14,6 +14,7 @@
 - [Day9. Object & Quick Help & Naming](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day9_object_quickHelp_naming.md)
 - [Day10. DataType & Format Specifier Polymorphism](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day10_dataType_formatSpecifier_polymorphism.md)
 - [Day11. SubClassing & Override & Infomation-Hiding](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day11_subClassing_override_informationHiding.md)
+- [Day12. InitilizeMethod](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day12_initilize_method.md)
 
 **iOS Frame Work**
 
