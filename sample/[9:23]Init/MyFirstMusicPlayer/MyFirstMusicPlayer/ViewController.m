@@ -11,11 +11,19 @@
 
 @interface ViewController ()    <AVAudioPlayerDelegate>
 
+///AVAudioPlay 라는 객체를 만듬 ( 아직 주소값은 주지 않은듯 )
 @property AVAudioPlayer *player;
+
+///UIButton 이라는 객체를 만든
 @property UIButton *playButton;
+
+///UILabel 이라는 객체를 만듬
 @property UILabel *timeLabel;
+
+///NSTimer 라는 객체를 만듬
 @property NSTimer *timer;
 
+///displayTime 이라는 메서드를 만듬, NSTimeInterval은 객체가 아닌것 같음 double인것 같음.
 -(void)displayTime :(NSTimeInterval)currentTime duration:(NSTimeInterval)duration;
 
 @end
@@ -26,14 +34,17 @@
 
 
 - (void)viewDidLoad {
-    
+    /// 부모 클래스의 viewDidLoad 실행
     [super viewDidLoad];
-    
+
+    ///CGRectMake의 앞의 2개는 x,y 좌표를 나타내고 뒤의 2개는 사각형의 높이와 너비를 나타내며 반환 값은 CGRect 이다.
     CGRect labelFrame = CGRectMake(30.0f, 30.0f, 250.f, 30.f);
     CGRect buttonFrame = CGRectMake(30.f, 70.0f, 50.f, 30.f);
     
+    ///playButton에 buttonFrame의 값을 넣은것 같다. 
     self.playButton = [[UIButton alloc]initWithFrame:buttonFrame];
     
+    ///
     [self.playButton setTitle:@"Play" forState:UIControlStateNormal];
     
     [self.playButton setTitle:@"Pause" forState:UIControlStateSelected];

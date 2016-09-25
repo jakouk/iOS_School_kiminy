@@ -7,12 +7,12 @@
 //
 
 #import "Maple.h"
-#import "GameClass.h"
-
+#import "Beginner.h"
 @interface Monster : Maple
 
 
 -(id)initWithName:(NSString *)monsterName;
+
 -(id)physicalAttack:(GameClass *)gameClass;
 
 @end

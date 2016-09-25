@@ -46,11 +46,11 @@
 //이름, 지역, 모바일번호, 나이 ,학년
 -(instancetype)initWithName:(NSString *)name city:(NSString *)city mobileNumber:(NSString *)mobileNumber age:(NSInteger)age schoolName:(NSString *)school{
     
-    self = [self initWithmobileNumber:mobileNumber age:age];
-    self = [self initWithName:name location:city];
+    self = [super initWithmobileNumber:mobileNumber age:age];
+    self = [super initWithName:name location:city];
     
     // 쓰레기 값을 치워준다는 것이다.
-    self = [self init];
+    self = [super init];
     self.school = school;
     
     
