@@ -33,8 +33,11 @@
 //평균을 구해서 반환 해준다.
 - (CGFloat)average
 {
-    // 캐스팅을 해주어야 한다. 캐스팅이란 타입을 하는 것이다. 
-    CGFloat averageTemp = (CGFloat)self.totlaScore/(CGFloat)self.subjectCount;
+    // 캐스팅을 해주어야 한다. 캐스팅이란 타입을 하는 것이다.
+    CGFloat averageTemp = 0;
+    if(self.subjectCount > 0){
+        averageTemp = (CGFloat)self.totlaScore/(CGFloat)self.subjectCount;
+    }
     
     return averageTemp;
 }

@@ -10,6 +10,8 @@
 		73D66BA11D98AE6B00E98FF7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D66BA01D98AE6B00E98FF7 /* main.m */; };
 		73D66BB01D98BA7800E98FF7 /* CalculationSubject.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D66BAF1D98BA7800E98FF7 /* CalculationSubject.m */; };
 		73D66BB31D98C71000E98FF7 /* DimensionalShapes.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D66BB21D98C71000E98FF7 /* DimensionalShapes.m */; };
+		73D66BB71D98ECD400E98FF7 /* Toolbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D66BB61D98ECD400E98FF7 /* Toolbox.m */; };
+		73D66BBA1D98FE5700E98FF7 /* ifExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D66BB91D98FE5700E98FF7 /* ifExample.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +33,10 @@
 		73D66BAF1D98BA7800E98FF7 /* CalculationSubject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculationSubject.m; sourceTree = "<group>"; };
 		73D66BB11D98C71000E98FF7 /* DimensionalShapes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DimensionalShapes.h; sourceTree = "<group>"; };
 		73D66BB21D98C71000E98FF7 /* DimensionalShapes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DimensionalShapes.m; sourceTree = "<group>"; };
+		73D66BB51D98ECD400E98FF7 /* Toolbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Toolbox.h; sourceTree = "<group>"; };
+		73D66BB61D98ECD400E98FF7 /* Toolbox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Toolbox.m; sourceTree = "<group>"; };
+		73D66BB81D98FE5700E98FF7 /* ifExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ifExample.h; sourceTree = "<group>"; };
+		73D66BB91D98FE5700E98FF7 /* ifExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ifExample.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,10 +70,14 @@
 			isa = PBXGroup;
 			children = (
 				73D66BA01D98AE6B00E98FF7 /* main.m */,
+				73D66BB51D98ECD400E98FF7 /* Toolbox.h */,
+				73D66BB61D98ECD400E98FF7 /* Toolbox.m */,
 				73D66BB11D98C71000E98FF7 /* DimensionalShapes.h */,
 				73D66BB21D98C71000E98FF7 /* DimensionalShapes.m */,
 				73D66BAE1D98BA7800E98FF7 /* CalculationSubject.h */,
 				73D66BAF1D98BA7800E98FF7 /* CalculationSubject.m */,
+				73D66BB81D98FE5700E98FF7 /* ifExample.h */,
+				73D66BB91D98FE5700E98FF7 /* ifExample.m */,
 			);
 			path = Example0926;
 			sourceTree = "<group>";
@@ -132,6 +142,8 @@
 				73D66BB01D98BA7800E98FF7 /* CalculationSubject.m in Sources */,
 				73D66BA11D98AE6B00E98FF7 /* main.m in Sources */,
 				73D66BB31D98C71000E98FF7 /* DimensionalShapes.m in Sources */,
+				73D66BB71D98ECD400E98FF7 /* Toolbox.m in Sources */,
+				73D66BBA1D98FE5700E98FF7 /* ifExample.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
