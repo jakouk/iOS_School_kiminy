@@ -7,6 +7,7 @@
 //
 
 #import "Monster.h"
+#import "GameClass.h"
 
 @implementation Monster
 

@@ -8,7 +8,7 @@
 
 #import "Maple.h"
 #import "Weapon.h"
-#import "Monster.h"
+@class Monster;
 
 @interface GameClass : Maple
 

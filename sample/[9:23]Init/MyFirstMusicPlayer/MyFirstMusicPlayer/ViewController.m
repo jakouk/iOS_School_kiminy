@@ -34,7 +34,7 @@
 
 
 - (void)viewDidLoad {
-    /// 부모 클래스의 viewDidLoad 실행
+    /// 부모 클래스의 viewDidLoad메소드 실행
     [super viewDidLoad];
 
     ///CGRectMake의 앞의 2개는 x,y 좌표를 나타내고 뒤의 2개는 사각형의 높이와 너비를 나타내며 반환 값은 CGRect 이다.
@@ -44,21 +44,36 @@
     ///playButton에 buttonFrame의 값을 넣은것 같다. 
     self.playButton = [[UIButton alloc]initWithFrame:buttonFrame];
     
-    ///
+    ///버튼 이름 play로 설정하고 버튼 상태는 UIControlStateNormal로 설정
     [self.playButton setTitle:@"Play" forState:UIControlStateNormal];
     
+    ///버튼 이름 Pause로 설정하고 버튼 상태는 UIControlStateSelected로 설정
     [self.playButton setTitle:@"Pause" forState:UIControlStateSelected];
     
+    ///버튼 색상 blueColor로 설정하고 버튼 상태는 UIControlStateNormal로 설정
     [self.playButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
     
+    ///버튼 색상은redcolor로 설정하고 버튼 상태는 UIControlStateSelectd로 설정
     [self.playButton setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
     
+    //버튼 배경색은 setBackgroundColor로 설정됨.
     [self.playButton setBackgroundColor:[UIColor yellowColor]];
     
+    /*
+        버튼의 기본적인 배경색은 노란색이다.
+        UIControlStateNormal 상태일때 버튼은 play에 파란색
+        UIContorolStateSelected 상태일때 버튼은 Pause이고 빨간색
+     
+     */
+    
+    ///
     [self.playButton addTarget:self action:@selector(clickPlayButton:) forControlEvents:UIControlEventTouchUpInside];
     
+    ///자기자신의 뷰에 self.playButton이라는 뷰를 더한다.
     [self.view addSubview:self.playButton];
     
+    
+    //timeLabel = UILabel객체 라벨 프레임은 CGRect은 라벨의 크기와 위치를 정하는 구조체이다.
     self.timeLabel = [[UILabel alloc]initWithFrame:labelFrame];
     
     [self.timeLabel setTextColor:[UIColor brownColor]];

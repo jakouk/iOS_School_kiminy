@@ -7,7 +7,7 @@
 //
 
 #import "Maple.h"
-#import "Beginner.h"
+@class GameClass;
 @interface Monster : Maple
 
 
