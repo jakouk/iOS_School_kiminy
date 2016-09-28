@@ -1,4 +1,4 @@
-#### **Day14. memory & struct array**
+#### **Day14. memory & struct & array**
 
 #### Review
 ***
