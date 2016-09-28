@@ -92,8 +92,23 @@ int main(int argc, const char * argv[]) {
     
     [ifExample checkLeapYear:1396];
     
+    NSInteger aNumber = 209;
+    NSString *aString = [NSString stringWithFormat:@"%ld", aNumber];
     
     
+    
+    NSString *NumberString = @"2094034";
+    NSInteger i = [NumberString integerValue];
+
+    
+    
+    NSInteger a = 5;
+    NSInteger *b = &a;
+    NSInteger **c = &b;
+    
+    NSLog(@" a 값 %ld",**c);
+    NSLog(@" b의 값 %p",*c);
+    NSLog(@" c의 값 %p ",c);
     
     
     
