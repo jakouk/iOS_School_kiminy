@@ -16,6 +16,7 @@
 - [Day11. SubClassing & Override & Infomation-Hiding](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day11_subClassing_override_informationHiding.md)
 - [Day12. InitilizeMethod](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day12_initilize_method.md)
 - [Day13. ClassMethod & Conditional](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day13_classMethod_conditional.md)
+- [Day14. memory & struct & array](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day14_memory_struct_array.md)
 
 **iOS Frame Work**
 
