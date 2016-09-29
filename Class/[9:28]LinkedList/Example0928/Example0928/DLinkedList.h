@@ -14,10 +14,11 @@
     @property Node *header;
     @property NSInteger length;
     @property NSInteger lastIndex;
-    
+
     -(void)addFirstIndexNode:(NSInteger )newValue;
     -(void)addLastValue:(NSInteger)value;
     -(void)printAllNode;
     -(void)removeLast;
     -(void)searchData:(NSInteger)number;
+    -(void)printIndex:(NSInteger)index;
 @end

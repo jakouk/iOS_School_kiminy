@@ -20,6 +20,7 @@
             self.header.next = nil;
             self.header.preve = nil;
             self.lastIndex = 0;
+            
         }
         return self;
     }
@@ -132,6 +133,7 @@
         [self searchData:self.header number:number];
     }
     -(void)searchData:(Node *)node number:(NSInteger)number{
+        //node의 value값이 입력한 값과 같으면 위치와 데이터를 출력한다.
         if(node.value == number){
             NSLog(@"%ld 번째가 %ld 입니다.",node.index,number);
             return;
@@ -145,12 +147,22 @@
     }
     
     
-    //printIndex ( 해당 인덱스의 노드의 값을 찾는다. )
+//printIndex ( 해당 인덱스의 노드의 값을 찾는다. )
 -(void)printIndex:(NSInteger)index{
-    [self printIndex:index];
+    [self printIndexNodeData:self.header index:index];
 }
 
--(void)printIndexNodeData:(NSInteger)index{}
+// 해당하는 index의 값에 도달할때 까지 재귀함수를 진행한다. 
+-(void)printIndexNodeData:(Node *)node index:(NSInteger)index
+{
+    if(node.index == index)
+    {
+        NSLog(@"%ld번 index의 값은 %ld 입니다.",node.index,node.value);
+    }else{
+        [self printIndexNodeData:node.next index:index];
+    }
+}
+
 
 
 @end

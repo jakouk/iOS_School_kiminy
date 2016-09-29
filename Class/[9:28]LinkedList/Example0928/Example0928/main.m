@@ -28,5 +28,7 @@ int main(int argc, const char * argv[]) {
     
     [dlink searchData:10];
     
+    [dlink printIndex:2];
+    
     return 0;
 }

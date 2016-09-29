@@ -110,7 +110,7 @@ int main(int argc, const char * argv[]) {
     NSLog(@" b의 값 %p",*c);
     NSLog(@" c의 값 %p ",c);
     
-    
+    NSLog(@"%hhd",[ifExample isEvenNumber:8]);
     
     return 0;
 }
