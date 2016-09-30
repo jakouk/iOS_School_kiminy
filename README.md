@@ -18,6 +18,7 @@
 - [Day13. ClassMethod & Conditional](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day13_classMethod_conditional.md)
 - [Day14. memory & struct & array](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day14_memory_struct_array.md)
 - [Day15. linkedList & Dictionaries](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day15_linkedList_dictionaries.md)
+- [Day16. iOS struct & UI View](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day16_iOS_struct_UI_view.md)
 
 **iOS Frame Work**
 
