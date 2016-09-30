@@ -71,6 +71,6 @@ CGRect frame; x,y,width,hegith
 CGPoint center; view의 가운데 x, y 좌표값을 가져옴.
 CGFloat alpha; 불투명도
 
-(void)removeFramSuperview;          // 부모에게서 나가는 것이다 ( 자살 느낌 , 자신의 뷰 삭제 )
-(void)addSubview:(UIView *)view;     //view를 자식으로 만드는 것.
+(void)removeFramSuperview;          // 부모에게서 나가는 것이다 ( 가출 느낌 , 자신의 뷰 삭제 )
+(void)addSubview:(UIView *)view;     //view를 자식으로 만드는 것. ( 입양 느낌 )
 ```
