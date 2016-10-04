@@ -29,5 +29,6 @@
 +(void)limitedGame369:(NSInteger)number;
 
 +(void)game369limited:(NSInteger)number;
++(void)addAllNumNew:(NSInteger)number;
 
 @end

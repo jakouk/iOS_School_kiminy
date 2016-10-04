@@ -77,9 +77,10 @@ int main(int argc, const char * argv[]) {
         //노래제목으로 재생시간출력
         NSLog(@"%@",[Test songTime:@"심쿵해" data:aoaAlbum]);
         
-        //369 제한 없는것 만드는중 
-        [Test game369limited:50];
+        //369 제한 없는것 만드는중 가능하기는 하지만 최대 크기에 한계가 있다 mutableArray 인지 NSString 인지는 모름.
+        [Test game369limited:1000];
         
+        [Test addAllNumNew:5792];
     }
     return 0;
 }

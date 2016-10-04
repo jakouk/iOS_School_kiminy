@@ -123,47 +123,54 @@ const NSInteger r = 3;
     
 }
 
+//숫자들의 각 자리 더라기
++(void)addAllNumNew:(NSInteger)number{
+    
+    NSInteger middle = number;
+    NSInteger result = 0;
+    
+    while(middle >= 10){
+        result = result + middle % 10;
+        middle = middle / 10;
+    }
+    
+    result = result +middle%10;
+    
+    NSLog(@"%ld",result);
+    
+}
+
 //limited 369
 +(void)game369limited:(NSInteger)number{
     
     NSMutableArray *game = [[NSMutableArray alloc]init];
 
-    for (NSInteger i = 1 ; i<=number ; i += 1){
+    for (NSInteger i = 1 ; i<= number ; i += 1){
         
-        NSInteger origin = i;
-        NSInteger middle = number / 10;
-        NSInteger i = number % 10;
+        NSInteger middle = i;
         NSInteger count = 0;
-        
-        if(i%10 == 3 || i%10 == 6 || i%10 == 9){
-            
-            count = count +1;
-        }
         
         while(middle >= 10){
             
-            i = middle % 10;
+            if(middle%10 ==3 || middle %10 == 6 || middle %10 == 9){
+                count = count + 1;
+            }
             middle = middle / 10;
             
-            if(i%10 == 3 || i%10 == 6 || i%10 == 9){
-                count = count +1;
-            }
-            
         }
         
-        if(middle%10 == 3 || middle%10 == 6 || middle%10 == 9){
-            count = count +1;
+        if(middle%10 ==3 || middle %10 == 6 || middle %10 == 9){
+            count = count + 1;
         }
         
-        if(count >0){
+        if(count > 0){
             [game addObject:@"* "];
         }else{
-            NSString *str = [[NSString alloc]initWithFormat:@"%ld ",origin];
-            
+            NSString *str = [[NSString alloc]initWithFormat:@"%ld ",i];
             [game addObject:str];
         }
-        
         count = 0;
+        
     }
     
      NSString *str1 = [[NSString alloc]init];
