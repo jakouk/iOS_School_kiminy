@@ -156,7 +156,6 @@ const NSInteger r = 3;
                 count = count + 1;
             }
             middle = middle / 10;
-            
         }
         
         if(middle%10 ==3 || middle %10 == 6 || middle %10 == 9){
@@ -339,5 +338,40 @@ const NSInteger r = 3;
     }
     return totalPlay;
 }
+
+//3574 -> 4753
++(void)changeString:(NSInteger)number{
+    
+    NSString *reverse = [[NSString alloc]init];
+    NSMutableArray *reverseNumber = [[NSMutableArray alloc]init];
+    
+    NSInteger middle = number;
+    
+    while(middle >= 10){
+        
+        NSString *str = [[NSString alloc]initWithFormat:@"%ld",middle%10];
+        [reverseNumber addObject:str];
+        
+        middle = middle / 10;
+    }
+    
+    NSString *str = [[NSString alloc]initWithFormat:@"%ld",middle];
+    [reverseNumber addObject:str];
+    
+    
+    for(NSInteger i = 0 ; i<[reverseNumber count]; i+=1){
+        
+        reverse =  [reverse stringByAppendingString:reverseNumber[i]];
+    }
+ 
+    
+    NSLog(@"changeString : %@",reverse);
+    
+}
+
+
+
+
+
 
 @end

@@ -31,4 +31,6 @@
 +(void)game369limited:(NSInteger)number;
 +(void)addAllNumNew:(NSInteger)number;
 
++(void)changeString:(NSInteger)number;
+
 @end

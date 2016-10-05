@@ -57,7 +57,7 @@ int main(int argc, const char * argv[]) {
         [Test triangularNum:5];
         
         //자리수 더라기
-        [Test addAllNum:5792];
+        [Test addAllNum:1111];
         
         //369게임
         [Test game369:20];
@@ -80,7 +80,9 @@ int main(int argc, const char * argv[]) {
         //369 제한 없는것 만드는중 가능하기는 하지만 최대 크기에 한계가 있다 mutableArray 인지 NSString 인지는 모름.
         [Test game369limited:1000];
         
-        [Test addAllNumNew:5792];
+        [Test addAllNumNew:1234];
+        
+        [Test changeString:3574];
     }
     return 0;
 }
