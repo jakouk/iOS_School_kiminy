@@ -20,6 +20,7 @@
 - [Day15. linkedList & Dictionaries](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day15_linkedList_dictionaries.md)
 - [Day16. iOS struct & UI View](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day16_iOS_struct_UI_view.md)
 - [Day17. UILabel & UIImage](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day17_uiLabel_uiImage.md)
+- [Day18. for & while](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day18_for_while.md)
 
 **iOS Frame Work**
 
