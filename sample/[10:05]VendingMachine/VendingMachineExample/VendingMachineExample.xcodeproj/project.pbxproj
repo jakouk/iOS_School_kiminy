@@ -13,6 +13,10 @@
 		73C993101DA4891000DD4B7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73C9930E1DA4891000DD4B7D /* Main.storyboard */; };
 		73C993121DA4891000DD4B7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73C993111DA4891000DD4B7D /* Assets.xcassets */; };
 		73C993151DA4891000DD4B7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73C993131DA4891000DD4B7D /* LaunchScreen.storyboard */; };
+		73C993201DA48C4200DD4B7D /* super-mario-06.png in Resources */ = {isa = PBXBuildFile; fileRef = 73C9931C1DA48C4200DD4B7D /* super-mario-06.png */; };
+		73C993211DA48C4200DD4B7D /* small-super-mario.png in Resources */ = {isa = PBXBuildFile; fileRef = 73C9931D1DA48C4200DD4B7D /* small-super-mario.png */; };
+		73C993221DA48C4200DD4B7D /* yoshi-super-mario-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 73C9931E1DA48C4200DD4B7D /* yoshi-super-mario-01.png */; };
+		73C993231DA48C4200DD4B7D /* Luigi_(Mario_Party_DS).png in Resources */ = {isa = PBXBuildFile; fileRef = 73C9931F1DA48C4200DD4B7D /* Luigi_(Mario_Party_DS).png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		73C993111DA4891000DD4B7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73C993141DA4891000DD4B7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		73C993161DA4891000DD4B7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73C9931C1DA48C4200DD4B7D /* super-mario-06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "super-mario-06.png"; sourceTree = "<group>"; };
+		73C9931D1DA48C4200DD4B7D /* small-super-mario.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "small-super-mario.png"; sourceTree = "<group>"; };
+		73C9931E1DA48C4200DD4B7D /* yoshi-super-mario-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yoshi-super-mario-01.png"; sourceTree = "<group>"; };
+		73C9931F1DA48C4200DD4B7D /* Luigi_(Mario_Party_DS).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Luigi_(Mario_Party_DS).png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,10 @@
 		73C993041DA4891000DD4B7D /* VendingMachineExample */ = {
 			isa = PBXGroup;
 			children = (
+				73C9931C1DA48C4200DD4B7D /* super-mario-06.png */,
+				73C9931D1DA48C4200DD4B7D /* small-super-mario.png */,
+				73C9931E1DA48C4200DD4B7D /* yoshi-super-mario-01.png */,
+				73C9931F1DA48C4200DD4B7D /* Luigi_(Mario_Party_DS).png */,
 				73C993081DA4891000DD4B7D /* AppDelegate.h */,
 				73C993091DA4891000DD4B7D /* AppDelegate.m */,
 				73C9930B1DA4891000DD4B7D /* ViewController.h */,
@@ -137,7 +149,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73C993221DA48C4200DD4B7D /* yoshi-super-mario-01.png in Resources */,
+				73C993201DA48C4200DD4B7D /* super-mario-06.png in Resources */,
 				73C993151DA4891000DD4B7D /* LaunchScreen.storyboard in Resources */,
+				73C993231DA48C4200DD4B7D /* Luigi_(Mario_Party_DS).png in Resources */,
+				73C993211DA48C4200DD4B7D /* small-super-mario.png in Resources */,
 				73C993121DA4891000DD4B7D /* Assets.xcassets in Resources */,
 				73C993101DA4891000DD4B7D /* Main.storyboard in Resources */,
 			);
@@ -307,6 +323,7 @@
 				73C9931B1DA4891000DD4B7D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
