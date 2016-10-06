@@ -15,8 +15,6 @@ int main(int argc, const char * argv[]) {
     
     DLinkedList *dlink = [[DLinkedList alloc]init];
     
-    
-    
     [dlink addLastValue:10];
     [dlink addLastValue:20];
     [dlink addLastValue:30];

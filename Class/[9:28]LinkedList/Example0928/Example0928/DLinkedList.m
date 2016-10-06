@@ -52,6 +52,32 @@
         }
     }
     
+    
+    -(void)addLastIndexNodeLoop:(Node *)nowNode newValue:(NSInteger)value{
+        
+        while(nowNode.next == nil){
+            
+            if(nowNode.next == nil){
+                
+                Node * newNode = [[Node alloc]init];
+                newNode.value = value;
+                newNode.preve = nowNode;
+                newNode.next = nil;
+                newNode.index = self.lastIndex;
+                
+                nowNode.next = newNode;
+                self.lastIndex = self.lastIndex +1;
+                
+            }
+            
+        }
+    
+    }
+    
+    
+    
+    
+    
     //앞쪽으로 데이터 추가
     -(void)addFirstIndexNode:(NSInteger )newValue
     {
@@ -76,6 +102,7 @@
         }
         
     }
+    
 
     //remove(데이터를 삭제한다.)
     -(void)remove{

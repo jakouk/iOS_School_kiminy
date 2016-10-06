@@ -21,4 +21,5 @@
     -(void)removeLast;
     -(void)searchData:(NSInteger)number;
     -(void)printIndex:(NSInteger)index;
+    -(void)addLastIndexNodeLoop:(Node *)nowNode newValue:(NSInteger)value;
 @end
