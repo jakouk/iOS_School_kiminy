@@ -1,4 +1,5 @@
 ### Class
+***
 **Computer Thinking**
 
 - Day1. 컴퓨터 역사 & 컴퓨터 구조
@@ -38,5 +39,5 @@
 ### Sample
 
 ### SoftWareEngineer
-
+***
 - [Day1. SoftWareEngineer](https://github.com/jakouk/iOS_School_kiminy/blob/master/SoftwareEngineering/Day1_SoftwareEngineering.md)
