@@ -22,6 +22,7 @@
 - [Day16. iOS struct & UI View](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day16_iOS_struct_UI_view.md)
 - [Day17. UILabel & UIImage](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day17_uiLabel_uiImage.md)
 - [Day18. for & while](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day18_for_while.md)
+- [Day19. Stack & Queue](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day19_stack_queue.md)
 
 **iOS Frame Work**
 
