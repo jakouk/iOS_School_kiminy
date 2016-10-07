@@ -62,13 +62,17 @@ Node * newNode = [[Node alloc]init];
 newNode.data = newValue;
 
 if(self.bottom == nil){
-self.top = newNode;
-newNode.next = nil;
-self.bottom = newNode;
-}else{
-newNode.next = self.top;
-self.top = newNode;
-}
+
+  self.top = newNode;
+  newNode.next = nil;
+  self.bottom = newNode;
+  
+  }else{
+  
+  newNode.next = self.top;
+  self.top = newNode;
+  
+  }
 }
 
 /** pop 메서드 데이터 입력
@@ -81,12 +85,13 @@ self.top = newNode;
 -(NSString *)pop{
 
 NSString *str = self.top.data;
-
 self.top = self.top.next;
-if(self.top == nil){
-self.bottom = nil;
-}
 
+ if(self.top == nil){
+  
+  self.bottom = nil;
+  
+}
 return str;
 }
 
@@ -99,7 +104,7 @@ return str;
 BOOL empty = NO;
 
 if(self.bottom == nil){
-empty = YES;
+  empty = YES;
 }
 
 return empty;
@@ -113,11 +118,11 @@ return empty;
 -(void)clear{
 
 while(self.top != nil){
-self.top = self.top.next;
-if(self.top == nil){
-self.bottom = nil;
-}
-}
+  self.top = self.top.next;
+    if(self.top == nil){
+      self.bottom = nil;
+      }
+   }
 }
 
 ```
