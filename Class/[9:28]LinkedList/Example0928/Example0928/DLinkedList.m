@@ -53,19 +53,22 @@
     }
     
     
-    -(void)addLastIndexNodeLoop:(Node *)nowNode newValue:(NSInteger)value{
+    -(void)addLastIndexNodeLoop:(NSInteger)value{
         
-        while(nowNode.next == nil){
+        Node * newNode = [[Node alloc]init];
+        newNode.value = value;
+        
+        while(newNode.next == nil){
             
-            if(nowNode.next == nil){
+            if(newNode.next == nil){
                 
                 Node * newNode = [[Node alloc]init];
                 newNode.value = value;
-                newNode.preve = nowNode;
+                newNode.preve = newNode;
                 newNode.next = nil;
                 newNode.index = self.lastIndex;
                 
-                nowNode.next = newNode;
+                newNode.next = newNode;
                 self.lastIndex = self.lastIndex +1;
                 
             }
@@ -73,9 +76,6 @@
         }
     
     }
-    
-    
-    
     
     
     //앞쪽으로 데이터 추가
