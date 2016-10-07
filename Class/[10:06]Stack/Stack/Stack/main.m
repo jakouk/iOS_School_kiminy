@@ -36,7 +36,7 @@ int main(int argc, const char * argv[]) {
         //비어있는지 여부 판단.
         NSLog(@"Empty : %hhd",[stack isEmpty]);
         
-//       [stack isEmpty];
+        //[stack isEmpty];
         
         //pop을 이용해서 스텍의 데이터 출력
         NSLog(@"%@",[stack pop]);
@@ -74,7 +74,41 @@ int main(int argc, const char * argv[]) {
         }else{
             NSLog(@"실패");
         }
+        
+        //큐 생성
+        Queue *queue = [[Queue alloc]init];
+        
+        [queue isEmpty];
+        
+        //큐에 데이터 입력
+        [queue put:@"1"];
+        [queue put:@"2"];
+        [queue put:@"3"];
+        [queue put:@"4"];
+        [queue put:@"5"];
+        [queue put:@"6"];
+        [queue put:@"7"];
+        [queue put:@"8"];
+        [queue put:@"9"];
+        [queue put:@"10"];
+        
+        
+        [queue isEmpty];
+        
+        //큐에 있는 데이터 출력
+        NSLog(@"%@",[queue get]);
+        NSLog(@"%@",[queue get]);
+        NSLog(@"%@",[queue get]);
+        NSLog(@"%@",[queue get]);
+        NSLog(@"%@",[queue get]);
+        NSLog(@"%@",[queue get]);
+        NSLog(@"%@",[queue get]);
+        NSLog(@"%@",[queue get]);
+        NSLog(@"%@",[queue get]);
+        NSLog(@"%@",[queue get]);
+        NSLog(@"%@",[queue get]);
       
+        [queue isEmpty];
         
     }
     return 0;
