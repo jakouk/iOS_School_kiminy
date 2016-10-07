@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Stack.h"
 #import "Queue.h"
+#import "BracketNew.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -66,6 +67,13 @@ int main(int argc, const char * argv[]) {
         //괄호 찾기후 데이터가 다 있는지 여부 판단. 
         NSLog(@"%@",[stack pop]);
         
+        BracketNew *bracket = [[BracketNew alloc]init];
+        
+        if([bracket checkBracketString:@"({ [(){ ]})"]){
+            NSLog(@"성공");
+        }else{
+            NSLog(@"실패");
+        }
       
         
     }

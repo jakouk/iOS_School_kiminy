@@ -13,4 +13,6 @@
 
 @property Stack *stack;
 
+-(BOOL)checkBracketString:(NSString *)str;
+
 @end
