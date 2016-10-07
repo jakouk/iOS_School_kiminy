@@ -1,5 +1,6 @@
 #### review
 ***
+
 ```objective-c
 //string -> integer
 NSInteger num = str.integerValue;
@@ -44,7 +45,10 @@ NSLog(@“%@“,dateStr);
 - pop : stack 구조에 데이터를 빼는 메서드
 - isEmpty : stack 구조에 데이터를 전부 빼는 메서드
 
-```objective - c
+
+
+```objective-c
+
 /** push 메서드 데이터 입력
 * top, bottom을 이용해서 스텍을 찾아간다.
 *  @param newValue 입력하려는 데이터
@@ -115,6 +119,7 @@ self.bottom = nil;
 }
 }
 }
+
 ```
 
 #### Queue
