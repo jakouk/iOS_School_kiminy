@@ -11,6 +11,7 @@
 #import "BubbleSort.h"
 #import "InsertSort.h"
 #import "MergeSort.h"
+#import "QuickSort.h"
 
 
 int main(int argc, const char * argv[]) {
@@ -33,6 +34,9 @@ int main(int argc, const char * argv[]) {
     NSArray *mSortedList = [mSort mergeSort:data];
     NSLog(@"MergeSort: %@",mSortedList);
     
+    QuickSort *qSort = [[QuickSort alloc]init];
+    NSArray *qSortedList = [qSort quickSort:data];
+    NSLog(@"QuickSort : %@", qSortedList);
     
     return 0;
 }

@@ -10,6 +10,16 @@
 
 @implementation MergeSort
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.totalSwitchCount = 0;
+        self.totalCompareCount = 0;
+    }
+    return self;
+}
+
 //나누기
 
 -(NSArray *)mergeSort:(NSArray *)list{
@@ -29,6 +39,8 @@
     NSRange rRange = NSMakeRange(centerIndex, list.count-centerIndex);
     NSArray *rightList = [list subarrayWithRange:rRange];
     
+    self.totalSwitchCount+=1;
+    
     return [self mergeLeftList:[self mergeSort:leftList] rightList:[self mergeSort:rightList]];
     
 }
@@ -44,6 +56,9 @@
     
     
     while(leftUnSorted.count != 0 || rightUnSorted.count != 0){
+        
+        
+        
         if(leftUnSorted.count == 0){
             //오른쪽 리스트에만 값이 있을때
             [sortedList addObject:rightUnSorted[0]];
@@ -72,9 +87,14 @@
                 [leftUnSorted removeObjectAtIndex:0];
                 [sortedList addObject:rightUnSorted[0]];
                 [rightUnSorted removeObjectAtIndex:0];
+                
             }
         }
     }
+    
+    self.totalCompareCount += 1;
+    
+    NSLog(@"merge : %ld, divide : %ld",self.totalCompareCount,self.totalSwitchCount);
     
     return sortedList;
 }

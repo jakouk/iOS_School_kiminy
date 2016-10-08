@@ -10,6 +10,9 @@
 
 @interface MergeSort : NSObject
 
+@property NSInteger totalSwitchCount;
+@property NSInteger totalCompareCount;
+
 -(NSArray *)mergeSort:(NSArray *)list;
 
 @end

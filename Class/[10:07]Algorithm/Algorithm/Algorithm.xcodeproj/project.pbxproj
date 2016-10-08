@@ -12,6 +12,7 @@
 		7327014A1DA75D5600AB4894 /* BubbleSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 732701491DA75D5600AB4894 /* BubbleSort.m */; };
 		7327014D1DA7655100AB4894 /* InsertSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 7327014C1DA7655100AB4894 /* InsertSort.m */; };
 		732701501DA77FB400AB4894 /* MergeSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 7327014F1DA77FB400AB4894 /* MergeSort.m */; };
+		73AEDBB11DA919DE00B39E78 /* QuickSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 73AEDBB01DA919DE00B39E78 /* QuickSort.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +38,8 @@
 		7327014C1DA7655100AB4894 /* InsertSort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InsertSort.m; sourceTree = "<group>"; };
 		7327014E1DA77FB400AB4894 /* MergeSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MergeSort.h; sourceTree = "<group>"; };
 		7327014F1DA77FB400AB4894 /* MergeSort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MergeSort.m; sourceTree = "<group>"; };
+		73AEDBAF1DA919DE00B39E78 /* QuickSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuickSort.h; sourceTree = "<group>"; };
+		73AEDBB01DA919DE00B39E78 /* QuickSort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuickSort.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +81,8 @@
 				732701491DA75D5600AB4894 /* BubbleSort.m */,
 				7327014E1DA77FB400AB4894 /* MergeSort.h */,
 				7327014F1DA77FB400AB4894 /* MergeSort.m */,
+				73AEDBAF1DA919DE00B39E78 /* QuickSort.h */,
+				73AEDBB01DA919DE00B39E78 /* QuickSort.m */,
 			);
 			path = Algorithm;
 			sourceTree = "<group>";
@@ -140,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				732701501DA77FB400AB4894 /* MergeSort.m in Sources */,
+				73AEDBB11DA919DE00B39E78 /* QuickSort.m in Sources */,
 				7327014D1DA7655100AB4894 /* InsertSort.m in Sources */,
 				732701471DA73E2700AB4894 /* SelectionSort.m in Sources */,
 				7327013F1DA73D0F00AB4894 /* main.m in Sources */,
@@ -270,6 +276,7 @@
 				732701441DA73D0F00AB4894 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
