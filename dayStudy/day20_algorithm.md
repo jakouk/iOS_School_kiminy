@@ -60,4 +60,4 @@
 - 2. 피벗을 중심으로 작은수는 왼쪽, 큰수는 오른쪽으로 이동한다.
 - 3. 각 부분 리스트를 통해 과정을 반복한다.
 
-#### **정렬이 구현된 소스**
+#### [정렬이 구현된 소스](https://github.com/jakouk/iOS_School_kiminy/tree/master/Class/%5B10:07%5DAlgorithm/Algorithm/Algorithm)

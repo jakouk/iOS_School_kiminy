@@ -23,6 +23,7 @@
 - [Day17. UILabel & UIImage](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day17_uiLabel_uiImage.md)
 - [Day18. for & while](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day18_for_while.md)
 - [Day19. Stack & Queue](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day19_stack_queue.md)
+- [Day20. algorithm](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day20_algorithm.md)
 
 **iOS Frame Work**
 
