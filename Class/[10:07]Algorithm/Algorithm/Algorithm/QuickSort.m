@@ -48,8 +48,6 @@
     //병합
     //결국 모든 값은 한번씩은 pivotValue가 되고 그 상태에서 정렬된 배열에 들어간다.
     
-    NSLog(@"pivotValue :%@",pivotValue);
-    
     [sortedArray addObjectsFromArray:[self quickSort: lessArray]];
     
     [sortedArray addObject:pivotValue];
