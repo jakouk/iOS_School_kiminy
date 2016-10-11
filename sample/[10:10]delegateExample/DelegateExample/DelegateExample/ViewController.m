@@ -17,12 +17,15 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view, typically from a nib.
     
     // delegate 에 tf의 주소값을 주었다.
     // borderStyle = textField 의 주변선을 그려준다.
     // placeholder = 설명글 ( 배경 )
+    
     UITextField *tf = [[UITextField alloc]init];
     tf.frame = CGRectMake(self.view.frame.size.width/2-50, 100, 100, 50);
     tf.borderStyle = UITextBorderStyleLine;
