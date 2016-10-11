@@ -24,6 +24,7 @@
 - [Day18. for & while](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day18_for_while.md)
 - [Day19. Stack & Queue](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day19_stack_queue.md)
 - [Day20. algorithm](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day20_algorithm.md)
+- [Day21. UIControl & Delegate](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day21_UIControl_Delegate.md)
 
 **iOS Frame Work**
 
