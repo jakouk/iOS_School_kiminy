@@ -32,11 +32,13 @@
     label.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:label];
     
+    
     //스크롤 컨텐츠 크기는 스크롤 보다 50 높게 설정
     self.scroll = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     [self.scroll setContentSize:CGSizeMake(self.view.frame.size.width, self.view.frame.size.height + 50)];
     self.scroll.delegate = self;
     self.scroll.bounces = NO;
+    self.scroll.scrollEnabled = NO;
     [self.view addSubview:self.scroll];
     
     //가운데 뷰로서 id, pw 입력 창등이 있다. 
@@ -65,6 +67,7 @@
     self.password.borderStyle = UITextBorderStyleLine;
     self.password.delegate = self;
     self.password.placeholder = @"비밀번호";
+    self.password.secureTextEntry = YES;
     [center addSubview:self.password];
     
     //로그인 회원가입 버튼
@@ -76,12 +79,18 @@
     UIButton *btn2 = [[UIButton alloc]initWithFrame:CGRectMake(170, 130, 100, 40)];
     [btn2 setTitle:@"회원가입" forState: UIControlStateNormal];
     [btn2 setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    
     [center addSubview:btn2];
+    
+    //배경화면을 누르면 키보드 다운
+    UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyboard)];
+    [self.view addGestureRecognizer:gestureRecognizer];
     
 }
 
 // 아이디 textField에서 return 을 누르면 비밀번호 textField로 이동
 // 비밀번호 textField에서 return 을 누르면 키보드 다운
+
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
     
     BOOL isUp;
@@ -106,13 +115,17 @@
     return YES;
 }
 
-
+- (void) hideKeyboard {
+    [self.scroll setContentOffset:CGPointMake(0, 0)];
+    [self.view endEditing:YES];
+}
 
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 
 

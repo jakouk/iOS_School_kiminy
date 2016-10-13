@@ -24,12 +24,8 @@
 {
     self = [super init];
     if (self) {
-        
         self.data = data;
         [self createView];
-        
-        
-        
     }
     return self;
 }
@@ -83,6 +79,7 @@
 
 - (void)onTouchupInsideItem:(UIButton *)sender{
     
+    //ItemView를 터치하면 action이 일어나고 didSelectredItemView의 매개변수로 button 객체가 들어가서 viewControll에서 사용할수 있다.
     if([self.delegate respondsToSelector:@selector(didSelectedItemView:)]){
         [self.delegate didSelectedItemView:self];
     }

@@ -171,6 +171,7 @@
     
 }
 
+//ItemView에 있는 델리게이트 메서드 
 -(void)didSelectedItemView:(ItemView *)itemView{
     
     NSString *title = [itemView getTitle];
