@@ -43,6 +43,8 @@
                     };
     
     
+    
+    
     UITableView *tableView =[[UITableView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStyleGrouped];
     tableView.dataSource = self;
     tableView.delegate = self;
@@ -100,7 +102,6 @@
     
     //image 키 값을 가져옴.
     UIImage *images = [UIImage imageNamed:[animalName objectForKey:@"image"]];
-    
     cell.imageView.image = images;
     
     return cell;
@@ -116,7 +117,6 @@
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
     
     NSArray *animalsName = self.animals.allKeys;
-    
     return animalsName[section];
 }
 
@@ -125,7 +125,6 @@
     
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
-
 
 
 - (void)didReceiveMemoryWarning {
