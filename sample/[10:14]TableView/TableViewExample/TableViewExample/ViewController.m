@@ -10,11 +10,16 @@
 
 @interface ViewController ()    <UITableViewDelegate, UITableViewDataSource>
 
+//데이터 저장
 @property NSDictionary *animals;
+
+
 @property NSMutableArray *selectArray;
 @property NSMutableArray *checkONList;
 @property UITableView *table;
 @property BOOL isEditing;
+
+//animals의 allkeys 저장
 @property NSArray *header;
 
 @end
@@ -43,6 +48,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //edit키 생성
     UIBarButtonItem *editButton = [[UIBarButtonItem alloc]initWithTitle:@"Edit" style:UIBarButtonItemStylePlain target:self action:@selector(onClickEditButton:)];
     [self.navigationItem setRightBarButtonItem:editButton];
     // Do any additional setup after loading the view, typically from a nib.
@@ -54,6 +60,7 @@
     self.table.dataSource = self;
     [self.view addSubview:self.table];
     
+    //switch의 select를 확인하기 위한 NSMutableArray
     self.checkONList = [[NSMutableArray alloc]initWithObjects:@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0, nil];
     self.isEditing = NO;
 }
@@ -82,7 +89,7 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     
     self.header = self.animals.allKeys;
-    return self.animals.allKeys.count;
+    return self.header.count;
 }
 
 //row 생성
@@ -98,6 +105,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     UITableViewCell *cell;
+    NSArray *row = [self.animals objectForKey:self.header[indexPath.section]];
     
     if(indexPath.row == 0 ){
         
@@ -107,12 +115,12 @@
         if(cell == nil){
             cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"switchCell"];
         }
+        
         seiko = [[UISwitch alloc]initWithFrame:CGRectMake(0, 0, 50, 40)];
         [seiko addTarget:self action:@selector(valuechangedSeiko:) forControlEvents:UIControlEventValueChanged];
         seiko.tag = indexPath.section;
         cell.accessoryView = seiko;
         //테이블뷰 이름을 줌.
-        NSArray *row = [self.animals objectForKey:self.header[indexPath.section]];
         cell.textLabel.text = row[indexPath.row];
         
         //이름에 jpg를 붙임.
@@ -124,26 +132,20 @@
         BOOL isON = [self.checkONList[indexPath.section]boolValue];
         
         [seiko setOn:isON];
-      
     }else{
         
         cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
         
         if(cell == nil){
             cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cell"];
-            
-            //테이블뷰 이름을 줌.
-            NSArray *row = [self.animals objectForKey:self.header[indexPath.section]];
-            cell.textLabel.text = row[indexPath.row];
-            
-            //이름에 jpg를 붙임.
-            NSString *str = [[NSString alloc]initWithFormat:@"%@.jpg",row[indexPath.row]];
-            str = [self imageNamejpg:str];
-            str = [str lowercaseString];
-            cell.imageView.image = [UIImage imageNamed:str];
-            
-            
-        }
+    }
+        cell.textLabel.text = row[indexPath.row];
+        
+        //이름에 jpg를 붙임.
+        NSString *str = [[NSString alloc]initWithFormat:@"%@.jpg",row[indexPath.row]];
+        str = [self imageNamejpg:str];
+        str = [str lowercaseString];
+        cell.imageView.image = [UIImage imageNamed:str];
     }
     return cell;
     
@@ -155,7 +157,7 @@
     [self.checkONList replaceObjectAtIndex:index withObject:@"1"];
 }
 
-//빈칸인 사진 모양 _ 붙여주기
+//두글자로 되어있는 사진이름에 (_)추가
 -(NSString *)imageNamejpg:(NSString *)string{
     
     string = [string stringByReplacingOccurrencesOfString:@" " withString:@"_"];
@@ -164,6 +166,8 @@
 
 //section 이름 생성
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    
+    NSLog(@" name %@",self.header[section]);
     
     return self.header[section];
 }
@@ -208,7 +212,7 @@
     return YES;
 }
 
-//셀이
+//section의 row를 이동가능하게 한다.
 -(void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath{
     
 }
