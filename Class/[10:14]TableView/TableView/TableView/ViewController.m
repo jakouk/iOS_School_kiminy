@@ -29,8 +29,9 @@
     [self.view addSubview:self.tvView];
     
     
-    self.dataList = @[@{@"title":@"2집",@"imageURL":@"2집.jpg"},
-                      @{@"title":@"3집",@"imageURL":@"3집.jpg"}];
+    self.dataList = @[@{@"title":@"1집",@"imageURL":@"1집.jpg"},
+                      @{@"title":@"2집",@"imageURL":@"2집.jpg"},
+                      @{@"title":@"3집",@"imageURL":@"3집.jpg"},];
     
 }
 
@@ -47,8 +48,6 @@
 //cell 생성
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    NSLog(@"%ld",indexPath.row);
-    
     //custom한 cell을 추가함.
     IdolCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     
@@ -57,10 +56,8 @@
     }
     
     NSDictionary *data = self.dataList[indexPath.row];
-    
     [cell setBackgroundImageName:[data objectForKey:@"imageURL"]];
     [cell setTitle:[data objectForKey:@"title"]];
-    
     cell.textLabel.text = [NSString stringWithFormat:@"%ld",indexPath.row];
     
     return cell;

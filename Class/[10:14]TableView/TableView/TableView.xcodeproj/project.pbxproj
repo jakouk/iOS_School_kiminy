@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		730463FF1DB44CD7007F341A /* 1집.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 730463FE1DB44CD7007F341A /* 1집.jpg */; };
 		73CD873C1DB0C97A00FD5053 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 73CD873B1DB0C97A00FD5053 /* main.m */; };
 		73CD873F1DB0C97A00FD5053 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 73CD873E1DB0C97A00FD5053 /* AppDelegate.m */; };
 		73CD87421DB0C97A00FD5053 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73CD87411DB0C97A00FD5053 /* ViewController.m */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		730463FE1DB44CD7007F341A /* 1집.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "1집.jpg"; sourceTree = "<group>"; };
 		73CD87371DB0C97A00FD5053 /* TableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73CD873B1DB0C97A00FD5053 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		73CD873D1DB0C97A00FD5053 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				73CD87411DB0C97A00FD5053 /* ViewController.m */,
 				73CD87511DB0CB5300FD5053 /* IdolCell.h */,
 				73CD87521DB0CB5300FD5053 /* IdolCell.m */,
+				730463FE1DB44CD7007F341A /* 1집.jpg */,
 				73CD87581DB0D35000FD5053 /* 2집.jpg */,
 				73CD87591DB0D35000FD5053 /* 3집.jpg */,
 				73CD87431DB0C97A00FD5053 /* Main.storyboard */,
@@ -153,6 +156,7 @@
 				73CD875B1DB0D35000FD5053 /* 3집.jpg in Resources */,
 				73CD875A1DB0D35000FD5053 /* 2집.jpg in Resources */,
 				73CD87451DB0C97A00FD5053 /* Main.storyboard in Resources */,
+				730463FF1DB44CD7007F341A /* 1집.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +325,7 @@
 				73CD87501DB0C97A00FD5053 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

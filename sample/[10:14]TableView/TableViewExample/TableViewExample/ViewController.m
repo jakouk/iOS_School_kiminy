@@ -41,7 +41,6 @@
                      @"R" : @[@"Rhinoceros"],
                      @"S" : @[@"Seagull"],
                      @"T" : @[@"Tasmania Devil"],
-                     
                      };
 }
 
@@ -153,8 +152,16 @@
 
 //선택된것 저장
 -(void)valuechangedSeiko:(UISwitch *)switched{
+    
     NSInteger index = switched.tag;
-    [self.checkONList replaceObjectAtIndex:index withObject:@"1"];
+    
+    //switched가 off 되있으면 1, on 되어 있으면 0
+    if(switched.isOn){
+        [self.checkONList replaceObjectAtIndex:index withObject:@"1"];
+    }else{
+        [self.checkONList replaceObjectAtIndex:index withObject:@"0"];
+    }
+    
 }
 
 //두글자로 되어있는 사진이름에 (_)추가
@@ -166,8 +173,6 @@
 
 //section 이름 생성
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
-    
-    NSLog(@" name %@",self.header[section]);
     
     return self.header[section];
 }
@@ -196,15 +201,21 @@
     return YES;
 }
 
-//
+// 테이블 셀의 스타일 값을 리턴해줌
 -(UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath{
     return UITableViewCellEditingStyleDelete;
 }
 
 //
 -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    
     //데이터 지우기
+    NSMutableArray *alpha = [self.animals objectForKey:self.header[indexPath.section]];
+    
+    [alpha removeObjectAtIndex:indexPath.row];
+    
     //셀을 지우기
+    [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
 }
 
 //셀이 이동 가능하도록 하는것
