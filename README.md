@@ -26,6 +26,7 @@
 - [Day20. algorithm](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day20_algorithm.md)
 - [Day21. UIControl & Delegate](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day21_UIControl_Delegate.md)
 - [Day22. UITextField & UIScrollView](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day22_UITextField_UIScrollView.md)
+- [Day23. TableView](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day23_TableView.md)
 
 **iOS Frame Work**
 
