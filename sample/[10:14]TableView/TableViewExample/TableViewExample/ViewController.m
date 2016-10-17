@@ -13,7 +13,6 @@
 //데이터 저장
 @property NSDictionary *animals;
 
-
 @property NSMutableArray *selectArray;
 @property NSMutableArray *checkONList;
 @property UITableView *table;
@@ -95,9 +94,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
     NSArray *cell = [self.animals objectForKey:self.header[section]];
-    
     return cell.count;
-    
 }
 
 //셀 생성
@@ -124,7 +121,7 @@
         
         //이름에 jpg를 붙임.
         NSString *str = [[NSString alloc]initWithFormat:@"%@.jpg",row[indexPath.row]];
-        str = [self imageNamejpg:str];
+        str = [self imageNameJpg:str];
         str = [str lowercaseString];
         cell.imageView.image = [UIImage imageNamed:str];
 
@@ -142,7 +139,7 @@
         
         //이름에 jpg를 붙임.
         NSString *str = [[NSString alloc]initWithFormat:@"%@.jpg",row[indexPath.row]];
-        str = [self imageNamejpg:str];
+        str = [self imageNameJpg:str];
         str = [str lowercaseString];
         cell.imageView.image = [UIImage imageNamed:str];
     }
@@ -165,7 +162,7 @@
 }
 
 //두글자로 되어있는 사진이름에 (_)추가
--(NSString *)imageNamejpg:(NSString *)string{
+-(NSString *)imageNameJpg:(NSString *)string{
     
     string = [string stringByReplacingOccurrencesOfString:@" " withString:@"_"];
     return string;
@@ -210,10 +207,8 @@
 -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
     
     //데이터 지우기
-    NSMutableArray *alpha = [self.animals objectForKey:self.header[indexPath.section]];
-    
-    [alpha removeObjectAtIndex:indexPath.row];
-    
+    [[self.animals objectForKey:self.header[indexPath.section]] removeObjectAtIndex:indexPath.row];
+
     //셀을 지우기
     [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
 }
