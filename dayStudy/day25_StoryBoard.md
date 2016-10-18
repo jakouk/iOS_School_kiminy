@@ -1,12 +1,14 @@
-y25 StoryBoard
+### Day25 StoryBoard
 ***
- #### Review
+
+#### Review
+***
 - reuse(재사용)
 - table Accessory
 - tableView Editing
-***
-#### Storyboard
 
+#### Storyboard
+***
  - Xcode에서 UI와 UX를 손쉽게 구성할 수 있도록 마련한 도구
  - 화면의 구성과 흐름 파악 가능
  - 코드와 직접 아울렛 및 액션을 연결 가능
