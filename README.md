@@ -27,6 +27,8 @@
 - [Day21. UIControl & Delegate](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day21_UIControl_Delegate.md)
 - [Day22. UITextField & UIScrollView](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day22_UITextField_UIScrollView.md)
 - [Day23. TableView](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day23_TableView.md)
+- [Day24. TableViewCell & Accessory](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day24_TableView_Cell_Accessory.md)
+- [Day25. StoryBoard](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day25_StoryBoard.md)
 
 **iOS Frame Work**
 
