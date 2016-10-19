@@ -10,6 +10,7 @@
 
 @interface ViewController ()
 
+//제약조건 , 레이블에 크기 출력
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *layoutSize;
 @property (weak, nonatomic) IBOutlet UILabel *sizeLabel;
 
@@ -31,6 +32,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+//스테퍼를 통한 크기 조절 액션
 -(IBAction)changedLayoutSize:(id)sender{
     
     UIStepper *stepper = sender;
