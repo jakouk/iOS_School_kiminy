@@ -7,12 +7,13 @@
 //
 
 #import "ViewController.h"
+#import "ItemView.h"
 
 @interface ViewController ()
-
+<ItemViewDelegate>
 
 @property (nonatomic) NSArray *itemImgName;
-@property (nonatomic) NSDictionary *itemData;
+@property (nonatomic) NSArray *itemData;
 @property (nonatomic) NSArray *costData;
 
 @property (nonatomic, weak) UIView *itemContainerView;
@@ -37,8 +38,15 @@
     [super viewDidLoad];
     
     self.itemImgName = @[@"island1",@"island2",@"island3.jpg",@"island4.jpg"];
-    self.itemData = @{@"sum1":@"1000",@"sum2":@"2000",@"sum3":@"3000",@"sum4":@"4000"};
+    
+    self.itemData = @[@{@"title":@"sum1",@"cost":@"1000",@"imageName":@"island1.png"},
+                    @{@"title":@"sum2",@"cost":@"2000",@"imageName":@"island2.png"},
+                    @{@"title":@"sum3",@"cost":@"3000",@"imageName":@"island3.jpg"},
+                    @{@"title":@"sum4",@"cost":@"4000",@"imageName":@"island4.jpg"}];
+    
+    //self.itemData = @{@"sum1":@"1000",@"sum2":@"2000",@"sum3":@"3000",@"sum4":@"4000"};
     self.costData = @[@"1000",@"500",@"100",@"반환"];
+    
     self.itemViews = [[NSMutableArray alloc] init];
     self.inputBtns = [[NSMutableArray alloc] init];
     
@@ -61,54 +69,18 @@
     self.itemContainerView = itemContainerView;
     
     //itemData 라는 dictionary의 모든 키값을 itemDataKeys라는 array에 저장
-    NSArray *itemDataKeys = self.itemData.allKeys;
+    //NSArray *itemDataKeys = self.itemData.allKeys;
     
     //item View
     //item View는 4개의 자판기 버튼의 뷰 하나.
     for (NSInteger i = 0; i < 4; i++) {
         //base
-        UIView *itemView = [[UIView alloc] init];
+        ItemView *itemView = [[ItemView alloc] initWithData:self.itemData[i]];
         itemView.backgroundColor = [UIColor grayColor];
         itemView.tag = i;
+        itemView.delegate = self;
         [self.itemContainerView addSubview:itemView];
         [self.itemViews addObject:itemView];
-        
-        //imageView
-        UIImageView *img = [[UIImageView alloc] init];
-        img.frame = CGRectMake(0, 0, itemView.frame.size.width, 200 - 35);
-        img.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-        img.image = [UIImage imageNamed:[self.itemImgName objectAtIndex:i]];
-        [itemView addSubview:img];
-        
-        //title
-        //버튼의 이름들
-        UILabel *titleLb = [[UILabel alloc] init];
-        titleLb.frame = CGRectMake(0, 200 - 35, itemView.frame.size.width, 20);
-        titleLb.text = [itemDataKeys objectAtIndex:i];
-        titleLb.font = [UIFont boldSystemFontOfSize:16];
-        titleLb.textAlignment = NSTextAlignmentCenter;
-        titleLb.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-        [itemView addSubview:titleLb];
-        
-        //cost
-        UILabel *costLB = [[UILabel alloc] init];
-        costLB.frame = CGRectMake(0, 200 - 15, itemView.frame.size.width, 15);
-        costLB.text = [self.itemData objectForKey:[itemDataKeys objectAtIndex:i]];
-        costLB.font = [UIFont systemFontOfSize:15];
-        costLB.textAlignment = NSTextAlignmentCenter;
-        costLB.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-        [itemView addSubview:costLB];
-        
-        //itemView위에 UIButton이라는 것을 덮어 씌움.
-        UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-        btn.frame = CGRectMake(0, 0, itemView.frame.size.width, itemView.frame.size.height);
-        
-        //이벤트에 관련된 메소드 인듯.
-        [btn addTarget:self action:@selector(onTouchupInsideItem:) forControlEvents:UIControlEventTouchUpInside];
-        
-        btn.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-        btn.tag = i;
-        [itemView addSubview:btn];
         
     }
     
@@ -144,7 +116,6 @@
         
         btn.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin|  UIViewAutoresizingFlexibleHeight;
         
-        //
         [btn setTitle:[self.costData objectAtIndex:i] forState:UIControlStateNormal];
         [btn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
         [btn setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
@@ -200,43 +171,45 @@
     
 }
 
+//ItemView에 있는 델리게이트 메서드 
+-(void)didSelectedItemView:(ItemView *)itemView{
+    
+    NSString *title = [itemView getTitle];
+    NSInteger cost = [itemView getCost];
+    
+    if(self.remaindMoney >= cost){
+    
+        //디스플레이 업데이트
+            self.remaindMoney -= cost;
+            self.displayLb.text = [NSString stringWithFormat:@"%ld",_remaindMoney];
+    
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"빙고"
+                                                                                     message:[NSString stringWithFormat:@"%@가 나왔습니다",title]
+                                                                              preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *okBtn = [UIAlertAction actionWithTitle:@"확인" style:UIAlertActionStyleCancel handler:nil];
+            [alertController addAction:okBtn];
+            [self presentViewController:alertController animated:YES completion:nil];
+    
+        }else{
+    
+            //잔액이 부족합니다.
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"실패"
+                                                                                     message:[NSString stringWithFormat:@"잔액이 부족합니다."]
+                                                                              preferredStyle:UIAlertControllerStyleAlert];
+    
+            UIAlertAction *okBtn = [UIAlertAction actionWithTitle:@"확인" style:UIAlertActionStyleCancel handler:nil];
+            [alertController addAction:okBtn];
+            [self presentViewController:alertController animated:YES completion:nil];
+            
+        }
+
+}
+
 //드링크 버튼 클릭시 액션
 //아이템 버튼 클릭시 액션
-- (void)onTouchupInsideItem:(UIButton *)sender
-{
-    //현재 클릭된 버튼의 금액
-    NSInteger selectedTag = sender.tag;
-    NSArray *dataKeys = self.itemData.allKeys;
-    
-    NSString *dataKey = [dataKeys objectAtIndex:selectedTag];
-    NSString *costStr = [self.itemData objectForKey:dataKey];
-    
-    if(self.remaindMoney >= costStr.integerValue){
-        
-        //디스플레이 업데이트
-        self.remaindMoney -= costStr.integerValue;
-        self.displayLb.text = [NSString stringWithFormat:@"%ld",_remaindMoney];
-        
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"빙고"
-                                                                                 message:[NSString stringWithFormat:@"%@가 나왔습니다",dataKey]
-                                                                          preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *okBtn = [UIAlertAction actionWithTitle:@"확인" style:UIAlertActionStyleCancel handler:nil];
-        [alertController addAction:okBtn];
-        [self presentViewController:alertController animated:YES completion:nil];
-        
-    }else{
-        
-        //잔액이 부족합니다.
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"실패"
-                                                                                 message:[NSString stringWithFormat:@"잔액이 부족합니다."]
-                                                                          preferredStyle:UIAlertControllerStyleAlert];
-        
-        UIAlertAction *okBtn = [UIAlertAction actionWithTitle:@"확인" style:UIAlertActionStyleCancel handler:nil];
-        [alertController addAction:okBtn];
-        [self presentViewController:alertController animated:YES completion:nil];
-        
-    }
-}
+//- (void)onTouchupInsideItem:(UIButton *)sender
+//{
+////}
 
 //돈
 - (void)onTouchupInsideCoin:(UIButton *)sender
@@ -276,14 +249,9 @@
         //디스플레이 뷰에 넣기
         self.remaindMoney += costStr.integerValue;
         self.displayLb.text = [NSString stringWithFormat:@"%ld",_remaindMoney];
-        
-         NSLog(@"금액 버튼 클릭");
+        NSLog(@"금액 버튼 클릭");
     }
     
-    
-    
-    
-   
 }
 
 - (void)didReceiveMemoryWarning {
