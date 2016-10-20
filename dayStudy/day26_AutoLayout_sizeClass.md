@@ -1,4 +1,4 @@
-y26 AutoLayout & SizeClass
+## Day26 AutoLayout & SizeClass
 ### Review
 ***
  - MVC
