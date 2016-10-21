@@ -11,7 +11,7 @@
 @interface IdolCell()
 
     @property UIImageView *backgroundImage;
-    @property UIView * coverView;
+    @property UIView *coverView;
     @property UILabel *titleLb;
 
 @end
@@ -57,8 +57,8 @@
     
     self.coverView = [[UIView alloc]initWithFrame:CGRectMake(10, 10, self.frame.size.width-20, self.frame.size.height-20)];
     self.coverView.backgroundColor = [[UIColor alloc]initWithRed:30.f/255 green:30.f/255 blue:30.f/255 alpha:0.5];
-    
     [self.backgroundImage addSubview:self.coverView];
+    
     self.titleLb = [[UILabel alloc]init];
     self.titleLb.font = [UIFont boldSystemFontOfSize:40];
     self.titleLb.textAlignment = NSTextAlignmentCenter;

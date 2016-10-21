@@ -13,6 +13,8 @@
 		73991EF41DB7BE4F00BCE7D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73991EF21DB7BE4F00BCE7D9 /* Main.storyboard */; };
 		73991EF61DB7BE4F00BCE7D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73991EF51DB7BE4F00BCE7D9 /* Assets.xcassets */; };
 		73991EF91DB7BE4F00BCE7D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73991EF71DB7BE4F00BCE7D9 /* LaunchScreen.storyboard */; };
+		73CADD3F1DB84AD6003AA90F /* PixarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 73CADD3E1DB84AD6003AA90F /* PixarCell.m */; };
+		73CADD571DB891F5003AA90F /* LoginStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73CADD561DB891F5003AA90F /* LoginStoryBoard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,9 @@
 		73991EF51DB7BE4F00BCE7D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73991EF81DB7BE4F00BCE7D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		73991EFA1DB7BE4F00BCE7D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73CADD3D1DB84AD6003AA90F /* PixarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PixarCell.h; sourceTree = "<group>"; };
+		73CADD3E1DB84AD6003AA90F /* PixarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PixarCell.m; sourceTree = "<group>"; };
+		73CADD561DB891F5003AA90F /* LoginStoryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LoginStoryBoard.storyboard; path = ../LoginStoryBoard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +67,10 @@
 				73991EED1DB7BE4F00BCE7D9 /* AppDelegate.m */,
 				73991EEF1DB7BE4F00BCE7D9 /* ViewController.h */,
 				73991EF01DB7BE4F00BCE7D9 /* ViewController.m */,
+				73CADD3D1DB84AD6003AA90F /* PixarCell.h */,
+				73CADD3E1DB84AD6003AA90F /* PixarCell.m */,
 				73991EF21DB7BE4F00BCE7D9 /* Main.storyboard */,
+				73CADD561DB891F5003AA90F /* LoginStoryBoard.storyboard */,
 				73991EF51DB7BE4F00BCE7D9 /* Assets.xcassets */,
 				73991EF71DB7BE4F00BCE7D9 /* LaunchScreen.storyboard */,
 				73991EFA1DB7BE4F00BCE7D9 /* Info.plist */,
@@ -138,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				73991EF91DB7BE4F00BCE7D9 /* LaunchScreen.storyboard in Resources */,
+				73CADD571DB891F5003AA90F /* LoginStoryBoard.storyboard in Resources */,
 				73991EF61DB7BE4F00BCE7D9 /* Assets.xcassets in Resources */,
 				73991EF41DB7BE4F00BCE7D9 /* Main.storyboard in Resources */,
 			);
@@ -152,6 +161,7 @@
 			files = (
 				73991EF11DB7BE4F00BCE7D9 /* ViewController.m in Sources */,
 				73991EEE1DB7BE4F00BCE7D9 /* AppDelegate.m in Sources */,
+				73CADD3F1DB84AD6003AA90F /* PixarCell.m in Sources */,
 				73991EEB1DB7BE4F00BCE7D9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,6 +317,7 @@
 				73991EFF1DB7BE4F00BCE7D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "PixarCell.h"
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -16,16 +17,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view, typically from a nib.
     UITableView *numberTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStylePlain];
     
     numberTableView.delegate = self;
     numberTableView.dataSource = self;
     
-    [self.view addSubview:numberTableView];
+    //[self.view addSubview:numberTableView];
 }
 
-
+//메모리 관리 차원의 메서드 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -48,6 +50,22 @@
     return cell;
     
 }
+
+-(void)loadView {
+    [super loadView];
+    NSLog(@"loadView");
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:YES];
+    NSLog(@"viewWillApper");
+}
+
+-(void)viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews];
+    NSLog(@"viewWillLayoutSubviews");
+}
+
 
 
 @end
