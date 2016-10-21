@@ -29,6 +29,7 @@
 - [Day23. TableView](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day23_TableView.md)
 - [Day24. TableViewCell & Accessory](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day24_TableView_Cell_Accessory.md)
 - [Day25. StoryBoard](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day25_StoryBoard.md)
+- [Day26. AutoLayout & SizeClass](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day26_AutoLayout_sizeClass.md)
 
 **iOS Frame Work**
 
