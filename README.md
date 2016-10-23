@@ -30,6 +30,8 @@
 - [Day24. TableViewCell & Accessory](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day24_TableView_Cell_Accessory.md)
 - [Day25. StoryBoard](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day25_StoryBoard.md)
 - [Day26. AutoLayout & SizeClass](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day26_AutoLayout_sizeClass.md)
+- [Day27. Life Cycle](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day27_Life_Cycle.md)
+- [Day28. Application Life Cycle](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day28_Application_Life_Cycle.md)
 
 **iOS Frame Work**
 
