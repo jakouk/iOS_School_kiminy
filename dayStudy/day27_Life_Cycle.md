@@ -1,7 +1,11 @@
  ## Day27 Life Cycle
+ 
  ***
+ 
  ### Review
+ 
  ***
+ 
  - AutoLayout
  - SizeClass
 
