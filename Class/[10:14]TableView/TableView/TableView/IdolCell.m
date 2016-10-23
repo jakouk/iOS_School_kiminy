@@ -66,7 +66,7 @@
     [self.coverView addSubview:self.titleLb];
 }
 
-//사진크기를 병견하기 위한 것.
+//사진크기를 변경하기 위한 것.
 -(void)updateLayout{
     self.backgroundImage.frame = self.bounds;
     self.coverView.frame = CGRectMake(10, 10, self.frame.size.width-20, self.frame.size.height-20);

@@ -40,10 +40,23 @@
     
     [scroll addSubview:newView1];
     
+    //2번째 스크롤
+    UIScrollView *calrories = [[UIScrollView alloc] init];
+    calrories.frame = CGRectMake(self.view.frame.size.width, 0, self.view.frame.size.width, self.view.frame.size.height);
+    [calrories setContentSize:CGSizeMake(scroll.frame.size.width, scroll.frame.size.height*2)];
+    calrories.delegate = self;
+    [scroll addSubview:calrories];
+    
     //초록색 뷰
     UIView *newView2 = [[UIView alloc]initWithFrame:CGRectMake(self.view.frame.size.width, 0, self.view.frame.size.width, self.view.frame.size.height)];
     newView2.backgroundColor = [UIColor greenColor];
-    [scroll addSubview:newView2];
+    [calrories addSubview:newView2];
+    
+    //핑크색 뷰
+    UIView *newView4 = [[UIView alloc] initWithFrame:CGRectMake(self.view.frame.size.width, self.view.frame.size.height, self.view.frame.size.width, self.view.frame.size.height)];
+    newView4.backgroundColor = [UIColor purpleColor];
+    [calrories addSubview:newView4];
+    
     
     //빨간색 뷰
     UIView *newView3 = [[UIView alloc]initWithFrame:CGRectMake(self.view.frame.size.width*2,0 , self.view.frame.size.width, self.view.frame.size.height)];

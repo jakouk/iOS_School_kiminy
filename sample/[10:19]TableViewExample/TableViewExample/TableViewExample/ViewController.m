@@ -19,12 +19,12 @@
     [super viewDidLoad];
     
     // Do any additional setup after loading the view, typically from a nib.
-    UITableView *numberTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStylePlain];
+    UITableView *numberTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStyleGrouped];
     
     numberTableView.delegate = self;
     numberTableView.dataSource = self;
     
-    //[self.view addSubview:numberTableView];
+    [self.view addSubview:numberTableView];
 }
 
 //메모리 관리 차원의 메서드 
@@ -40,13 +40,33 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    UITableViewCell *cell;
     
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cell"];
+    if (indexPath.row %3 != 0) {
+        
+        cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+        
+        if (cell == nil) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cell"];
+        }
+        
+        cell.textLabel.text = [NSString stringWithFormat:@"%ld",indexPath.row];
+        
+        
+        
+    } else {
+        
+        cell = [tableView dequeueReusableCellWithIdentifier:@"pixar"];
+        
+        if (cell == nil) {
+            cell = [[PixarCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"pixar"];
+        }
+        
+        cell.textLabel.text = [NSString stringWithFormat:@"%ld",indexPath.row];
+        
     }
     
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld",indexPath.row];
+   
     return cell;
     
 }

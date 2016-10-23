@@ -13,6 +13,7 @@
 @property UIImageView *pixarImage;
 @property UIView *coverView;
 @property UILabel *movieName;
+@property UIButton *like;
 
 @end
 
@@ -32,6 +33,11 @@
     // Initialization code
 }
 
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    [self updateLayout];
+}
+
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
@@ -47,7 +53,7 @@
     [self addSubview:self.pixarImage];
     
     self.coverView = [[UIView alloc] init];
-    self.coverView.backgroundColor = [[UIColor alloc] initWithRed:30.f/255 green:30.f/255 blue:30.f/255 alpha:1];
+    self.coverView.backgroundColor = [[UIColor alloc] initWithRed:30.f/255 green:30.f/255 blue:30.f/255 alpha:0.5];
     [self.pixarImage addSubview:self.coverView];
     
     self.movieName = [[UILabel alloc] init];
@@ -60,6 +66,16 @@
     self.pixarImage.frame = self.bounds;
     self.coverView.frame = CGRectMake(10, 10, self.frame.size.width-20, self.frame.size.height-20);
     self.movieName.frame = CGRectMake(0, 20, self.coverView.frame.size.width, self.coverView.frame.size.height-40);
+}
+
+//이미지를 설정해 주기 위한것.
+- (void)setPixarImageName:(NSString *)name {
+    self.pixarImage.image = [UIImage imageNamed:name];
+}
+
+//타이틀 이름을 설정해 주기 위한것.
+- (void)setMovieNameText:(NSString *)movieName {
+    self.movieName.text = movieName;
 }
 
 @end
