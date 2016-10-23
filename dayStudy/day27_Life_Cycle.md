@@ -1,9 +1,7 @@
- ## Day27 Life Cycle
- 
+## Day27 Life Cycle
  ***
  
  ### Review
- 
  ***
  
  - AutoLayout
