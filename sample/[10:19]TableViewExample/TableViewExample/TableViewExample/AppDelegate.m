@@ -29,7 +29,6 @@
         firstStoryboard = [UIStoryboard storyboardWithName:@"LoginStoryBoard" bundle:nil];
     }
     
-    //
     rootViewController = [firstStoryboard instantiateInitialViewController];
     
 //    rootViewController = [[UIViewController alloc] init];

@@ -37,26 +37,26 @@
     //파란색 뷰
     UIView *newView1 = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     newView1.backgroundColor = [UIColor blueColor];
-    
     [scroll addSubview:newView1];
     
     //2번째 스크롤
-    UIScrollView *calrories = [[UIScrollView alloc] init];
-    calrories.frame = CGRectMake(self.view.frame.size.width, 0, self.view.frame.size.width, self.view.frame.size.height);
-    [calrories setContentSize:CGSizeMake(scroll.frame.size.width, scroll.frame.size.height*2)];
-    calrories.delegate = self;
-    [scroll addSubview:calrories];
+    //2번째 page 시작
+    UIScrollView *calories = [[UIScrollView alloc] init];
+    calories.frame = CGRectMake(self.view.frame.size.width, 0, self.view.frame.size.width, self.view.frame.size.height);
+    [calories setContentSize:CGSizeMake(calories.frame.size.width, calories.frame.size.height*2)];
+    calories.delegate = self;
+    [scroll addSubview:calories];
     
     //초록색 뷰
-    UIView *newView2 = [[UIView alloc]initWithFrame:CGRectMake(self.view.frame.size.width, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    UIView *newView2 = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     newView2.backgroundColor = [UIColor greenColor];
-    [calrories addSubview:newView2];
+    [calories addSubview:newView2];
     
-    //핑크색 뷰
-    UIView *newView4 = [[UIView alloc] initWithFrame:CGRectMake(self.view.frame.size.width, self.view.frame.size.height, self.view.frame.size.width, self.view.frame.size.height)];
+    //퍼플색 뷰
+    UIView *newView4 = [[UIView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height, self.view.frame.size.width, self.view.frame.size.height)];
     newView4.backgroundColor = [UIColor purpleColor];
-    [calrories addSubview:newView4];
-    
+    [calories addSubview:newView4];
+    //2번째 page 끝
     
     //빨간색 뷰
     UIView *newView3 = [[UIView alloc]initWithFrame:CGRectMake(self.view.frame.size.width*2,0 , self.view.frame.size.width, self.view.frame.size.height)];
@@ -123,10 +123,7 @@
     return NO;
 }
 
-
-
-
-
+//메모리 관련 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

@@ -19,6 +19,7 @@
 
 @implementation PixarCell
 
+//셀의 스타일 인것 같음 ( 재사용 하는 셀관련 )
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -33,6 +34,7 @@
     // Initialization code
 }
 
+//화면이 뿌려질때 크기를 지정하면서 뿌려짐
 - (void)layoutSubviews {
     [super layoutSubviews];
     [self updateLayout];
@@ -44,6 +46,7 @@
     // Configure the view for the selected state
 }
 
+//커스텀셀을 만듬.
 - (void)createView {
     
     self.pixarImage = [[UIImageView alloc] init];
@@ -62,6 +65,7 @@
     [self.coverView addSubview:self.movieName];
 }
 
+//크기 지정
 - (void)updateLayout {
     self.pixarImage.frame = self.bounds;
     self.coverView.frame = CGRectMake(10, 10, self.frame.size.width-20, self.frame.size.height-20);
