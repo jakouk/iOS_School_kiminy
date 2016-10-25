@@ -34,7 +34,7 @@
     // Initialization code
 }
 
-//화면이 뿌려질때 크기를 지정하면서 뿌려짐
+//화면이 뿌려질때 크기를 지정하면서 뿌려짐/ 프레임이 바뀔때 마다 (?)
 - (void)layoutSubviews {
     [super layoutSubviews];
     [self updateLayout];
