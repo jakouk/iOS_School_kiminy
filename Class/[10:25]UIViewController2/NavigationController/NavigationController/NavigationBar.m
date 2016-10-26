@@ -8,6 +8,13 @@
 
 #import "NavigationBar.h"
 
+typedef enum{
+    
+    WingNaviBarTypeNomal = 0,
+    WingNaviBarTypeAdd = 1
+    
+}WingNaviBarType;
+
 @interface NavigationBar ()
 
 @property UIViewController *uv;
