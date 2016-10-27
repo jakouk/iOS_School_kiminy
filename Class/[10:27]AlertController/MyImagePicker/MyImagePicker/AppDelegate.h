@@ -1,8 +1,8 @@
 //
 //  AppDelegate.h
-//  TabBar
+//  MyImagePicker
 //
-//  Created by jakouk on 2016. 10. 25..
+//  Created by jakouk on 2016. 10. 27..
 //  Copyright © 2016년 jakouk. All rights reserved.
 //
 
@@ -12,7 +12,6 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
-- (BOOL)application:(UIApplication *)application shouldSaveApplicationState:(NSCoder *)coder;
 
 @end
 

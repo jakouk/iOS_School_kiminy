@@ -1,8 +1,8 @@
 //
 //  AppDelegate.m
-//  TabBar
+//  UIAlertController
 //
-//  Created by jakouk on 2016. 10. 25..
+//  Created by jakouk on 2016. 10. 27..
 //  Copyright © 2016년 jakouk. All rights reserved.
 //
 
@@ -18,21 +18,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     return YES;
-}
-
-
-- (BOOL)application:(UIApplication *)application shouldSaveApplicationState:(NSCoder *)coder {
-    NSLog(@"shouldSaveApplicationState");
-    return YES;
-}
-
-- (BOOL)application:(UIApplication *)application shouldRestoreApplicationState:(NSCoder *)coder{
-    NSLog(@"shouldRestoreApplicationState");
-    return YES;
-}
-
-- (void)application:(UIApplication *)application didDecodeRestorableStateWithCoder:(NSCoder *)coder {
-    NSLog(@"didDecodeRestorableStateWithCorder");
 }
 
 
