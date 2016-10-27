@@ -36,6 +36,8 @@
 **iOS Frame Work**
 
 **View Control & DB Connection**
+- [Day29. UIViewController](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day29_UIViewController.md)
+- [Day30. Navigation Controller & TabBar](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day30_NavigationController_TabBar.md)
 
 
 
