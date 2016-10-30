@@ -41,52 +41,33 @@
     CGRect labelFrame = CGRectMake(30.0f, 30.0f, 250.f, 30.f);
     CGRect buttonFrame = CGRectMake(30.f, 70.0f, 50.f, 30.f);
     
-    ///playButton에 buttonFrame의 값을 넣은것 같다. 
     self.playButton = [[UIButton alloc]initWithFrame:buttonFrame];
-    
-    ///버튼 이름 play로 설정하고 버튼 상태는 UIControlStateNormal로 설정
     [self.playButton setTitle:@"Play" forState:UIControlStateNormal];
-    
-    ///버튼 이름 Pause로 설정하고 버튼 상태는 UIControlStateSelected로 설정
     [self.playButton setTitle:@"Pause" forState:UIControlStateSelected];
-    
-    ///버튼 색상 blueColor로 설정하고 버튼 상태는 UIControlStateNormal로 설정
     [self.playButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
-    
-    ///버튼 색상은redcolor로 설정하고 버튼 상태는 UIControlStateSelectd로 설정
     [self.playButton setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
-    
-    //버튼 배경색은 setBackgroundColor로 설정됨.
     [self.playButton setBackgroundColor:[UIColor yellowColor]];
     
     /*
         버튼의 기본적인 배경색은 노란색이다.
         UIControlStateNormal 상태일때 버튼은 play에 파란색
         UIContorolStateSelected 상태일때 버튼은 Pause이고 빨간색
-     
      */
-    
-    ///
     [self.playButton addTarget:self action:@selector(clickPlayButton:) forControlEvents:UIControlEventTouchUpInside];
     
     ///자기자신의 뷰에 self.playButton이라는 뷰를 더한다.
     [self.view addSubview:self.playButton];
     
-    
     //timeLabel = UILabel객체 라벨 프레임은 CGRect은 라벨의 크기와 위치를 정하는 구조체이다.
     self.timeLabel = [[UILabel alloc]initWithFrame:labelFrame];
     
     [self.timeLabel setTextColor:[UIColor brownColor]];
-    
     [self.view addSubview:self.timeLabel];
-    
     [self displayTime:0
              duration:0];
     
     NSURL *soundFileURL = [[NSBundle mainBundle]URLForResource:@"01. 우주를 줄게" withExtension:@"mp3"];
-    
     self.player = [[AVAudioPlayer alloc]initWithContentsOfURL:soundFileURL error:nil];
-    
     [self.player setDelegate:self];
     
 }
@@ -125,11 +106,8 @@
         [self.timer fire];
         
     }else{
-        
         [self.player pause];
-        
         [self.timer invalidate];
-        
         self.timer = nil;
     }
     
