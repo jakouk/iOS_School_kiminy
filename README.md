@@ -37,7 +37,7 @@
 - [Day29. UIViewController](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day29_UIViewController.md)
 - [Day30. Navigation Controller & TabBar](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day30_NavigationController_TabBar.md)
 - [Day31. AlertController](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day31_UIAlertController.md)
-
+- [Day32. Singleton](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day32_singletone.md)
 **iOS Frame Work**
 
 
