@@ -17,8 +17,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    NSString * __weak string = @"Hello";
+    NSLog(@"string: %@", string);
 }
 
+- (void)encodeRestorableStateWithCoder:(NSCoder *)coder {
+    
+}
+
+- (void)decodeRestorableStateWithCoder:(NSCoder *)coder {
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -11,17 +11,18 @@
 
 @interface ViewController ()    <AVAudioPlayerDelegate>
 
-///AVAudioPlay 라는 객체를 만듬 ( 아직 주소값은 주지 않은듯 )
+
 @property AVAudioPlayer *player;
-
-///UIButton 이라는 객체를 만든
 @property UIButton *playButton;
-
-///UILabel 이라는 객체를 만듬
 @property UILabel *timeLabel;
-
-///NSTimer 라는 객체를 만듬
 @property NSTimer *timer;
+
+@property BOOL shouldContinuePlay;
+
+@property (weak, nonatomic) IBOutlet UILabel *keyboardCheck;
+@property (weak, nonatomic) IBOutlet UILabel *keyboardFrame;
+@property (weak, nonatomic) IBOutlet UITextField *textField;
+
 
 ///displayTime 이라는 메서드를 만듬, NSTimeInterval은 객체가 아닌것 같음 double인것 같음.
 -(void)displayTime :(NSTimeInterval)currentTime duration:(NSTimeInterval)duration;
@@ -47,7 +48,6 @@
     [self.playButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
     [self.playButton setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
     [self.playButton setBackgroundColor:[UIColor yellowColor]];
-    
     /*
         버튼의 기본적인 배경색은 노란색이다.
         UIControlStateNormal 상태일때 버튼은 play에 파란색
@@ -70,18 +70,43 @@
     self.player = [[AVAudioPlayer alloc]initWithContentsOfURL:soundFileURL error:nil];
     [self.player setDelegate:self];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didReceiveApplicationStateChagedNotification:) name:UIApplicationWillResignActiveNotification object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didReceiveApplicationStateChagedNotification:) name:UIApplicationDidBecomeActiveNotification object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didReceiveKeyboardNotification:) name:UIKeyboardDidHideNotification object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didReceiveKeyboardNotification:) name:UIKeyboardDidShowNotification object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didReceiveKeyboardNotification:) name:UIKeyboardDidChangeFrameNotification object:nil];
 }
-
 #pragma mark - Display Something
+
+- (void)didReceiveKeyboardNotification:(NSNotification *)noti {
+    if ([[noti name] isEqualToString:UIKeyboardDidHideNotification]) {
+        self.keyboardCheck.text = @"키보드 없음";
+        
+    } else if ([[noti name] isEqualToString:UIKeyboardDidShowNotification]) {
+        self.keyboardCheck.text =@"키보드 있음";
+    }
+    
+    if ([[noti name] isEqualToString:UIKeyboardDidChangeFrameNotification]) {
+        NSValue *frameValue = [[noti userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey];
+        if ([frameValue isKindOfClass:[NSValue class]]) {
+            CGRect keyboardFrame = [frameValue CGRectValue];
+            NSString *frameString = NSStringFromCGRect(keyboardFrame);
+            [[self keyboardFrame] setText:frameString];
+        }
+    }
+
+}
 
 -(void)displayTime:(NSTimeInterval)currentTime duration:(NSTimeInterval)duration{
     
     NSInteger currentMin = (NSInteger)(currentTime / 60.0);
     NSInteger currentSec = ((NSInteger)currentTime % 60);
-    
     NSInteger durationMin = (NSInteger)(duration /60.0);
     NSInteger durationSec = ((NSInteger)duration % 60);
-    
     NSString *timeString = [[NSString alloc]initWithFormat:@"%02ld:%02ld / %02ld:%02ld",currentMin,currentSec,durationMin,durationSec];
     
     [self.timeLabel setText:timeString];
@@ -90,60 +115,66 @@
 #pragma mark - Button Methods
 
 - (void)clickPlayButton:(UIButton *)sender{
-    
     BOOL currentSelectedState = sender.selected;
-    
     [sender setSelected:!currentSelectedState];
-    
     if(sender.isSelected == YES){
         [self.player play];
-        
         self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0f
                                                       target:self
                                                     selector:@selector(checkTime)
                                                     userInfo:nil
                                                      repeats:YES];
         [self.timer fire];
-        
     }else{
         [self.player pause];
         [self.timer invalidate];
         self.timer = nil;
     }
+}
+
+-(void)didReceiveApplicationStateChagedNotification:(NSNotification *)noti {
+    NSLog(@"___ state changed %@",noti.name);
+}
+
+- (void)didReceiveResignActiveNotification:(NSNotification *)noti {
+    NSLog(@"___did will resign active");
     
+    if ([[self player] isPlaying]) {
+        [self setShouldContinuePlay:YES];
+        [self.player pause];
+    }
+}
+
+- (void)didReceiveDidBecomActiveNotification:(NSNotification *)noti {
+        NSLog(@"___did become active");
     
+    if ([self shouldContinuePlay]) {
+        [self setShouldContinuePlay:NO];
+        [self.player play];
+    }
 }
 
 -(void)checkTime{
-    if((self.player.duration >0) && (self.player.currentTime >0)){
-        
+    if ((self.player.duration >0) && (self.player.currentTime >0)) {
         [self displayTime:self.player.currentTime
                  duration:self.player.duration];
     }
     return ;
-    
-    
 }
 
 #pragma mark - AVAudioPlayerDelegate Methods
 
 -(void)audioPlayerDecodeErrorDidOccur:(AVAudioPlayer *)player error:(NSError *)error{
-    
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"알람"
                                                                    message:@"음원 파일을 디코딩 하는데 문제가 발생했습니다."
                                                            preferredStyle:UIAlertControllerStyleAlert];
-    
     [alert addAction:[UIAlertAction actionWithTitle:@"확인" style:UIAlertActionStyleDefault handler:nil]];
-    
     [self presentViewController:alert animated:YES completion:^{
         NSLog(@"decode error occured :%@", error.localizedDescription); }];
-    
 }
 
 -(void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag{
-    
     NSLog(@"음악 재생이 종료됨");
-    
     [self displayTime:0
              duration:self.player.duration];
     [self.playButton setSelected:NO];

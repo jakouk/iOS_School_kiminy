@@ -12,8 +12,6 @@
 @property (nonatomic)NSArray *Blackpink;
 @property(nonatomic, retain) IBOutlet UIScrollView *scrollView;
 @property(nonatomic, retain) IBOutlet UIPageControl *pageControl;
-@property (weak, nonatomic) IBOutlet UIImageView *buttomImageView;
-
 @end
 
 @implementation ViewController
@@ -28,32 +26,23 @@
                        @{@"name":@"제니",@"image":@"제니.jpeg"},
                        @{@"name":@"지수",@"image":@"지수.jpg"}];
  
-    NSUInteger i = 0;
-    //self.Blackpink = i;
-    
+    //Dictionary에서 imaged이름은 Array에 저장한다.
     NSMutableArray *thisImg = [[NSMutableArray alloc] init];
-    
-    for(NSDictionary *songName in self.Blackpink){
+    for (NSDictionary *songName in self.Blackpink) {
         [thisImg addObject:[songName objectForKey:@"image"]];
     }
+    NSUInteger imageCount  = thisImg.count;
+    //array의 길이만큼 scrollView의 Content 사이즈를 잡아줌.
+    [self.scrollView setContentSize:CGSizeMake(self.scrollView.frame.size.width * imageCount, self.scrollView.frame.size.height)];
     
-    i = thisImg.count;
-    [self.scrollView setContentSize:CGSizeMake(self.scrollView.frame.size.width * i, self.scrollView.frame.size.height)];
-
-    for (NSInteger i = 0 ; i < thisImg.count; i += 1) {
-        UIImage *img = [[UIImage alloc] init];
-        img = [UIImage imageNamed:[thisImg objectAtIndex:i]];
-
-        UIImageView *imgView = [[UIImageView alloc] init];
-        imgView.frame = CGRectMake(self.scrollView.frame.size.width*i, 0, self.scrollView.frame.size.width, self.scrollView.frame.size.height);
-        
+    //만들어지는
+    for (NSInteger i = 0 ; i < imageCount; i += 1) {
+        UIImage *img = [UIImage imageNamed:[thisImg objectAtIndex:i]];
+        UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(self.scrollView.frame.size.width * i, 0, self.scrollView.frame.size.width, self.scrollView.frame.size.height)];
+        imgView.tag = i;
         imgView.contentMode = UIViewContentModeScaleAspectFill;
-        [imgView setImage:img];
+        imgView.image = img;
         [self.scrollView addSubview:imgView];
-        if(i == 0){
-            NSLog(@"이미지");
-            self.buttomImageView.image = img;
-        }
     }
         //ScrollView에 필요한 옵션을 적용한다.
         self.scrollView.showsVerticalScrollIndicator=NO;
@@ -94,13 +83,6 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [self.scrollView flashScrollIndicators]; // 스크롤바를 보였다가 사라지게 함
-}
-
-- (void)viewDidUnload {
-    [super viewDidUnload];
-    
-    self.scrollView = nil;
-    self.pageControl = nil;
 }
 
 @end
