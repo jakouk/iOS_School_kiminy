@@ -15,6 +15,7 @@
 		7331DAF31DBD9E0700BFBD71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7331DAF11DBD9E0700BFBD71 /* LaunchScreen.storyboard */; };
 		7331DAFC1DBD9E3B00BFBD71 /* JoinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7331DAFB1DBD9E3B00BFBD71 /* JoinViewController.m */; };
 		7331DAFE1DBDA76500BFBD71 /* 3집.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7331DAFD1DBDA76500BFBD71 /* 3집.jpg */; };
+		7390ADFD1DC9811400339AA5 /* DataCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7390ADFC1DC9811400339AA5 /* DataCenter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,8 @@
 		7331DAFA1DBD9E3B00BFBD71 /* JoinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JoinViewController.h; sourceTree = "<group>"; };
 		7331DAFB1DBD9E3B00BFBD71 /* JoinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JoinViewController.m; sourceTree = "<group>"; };
 		7331DAFD1DBDA76500BFBD71 /* 3집.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "3집.jpg"; sourceTree = "<group>"; };
+		7390ADFB1DC9811400339AA5 /* DataCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataCenter.h; sourceTree = "<group>"; };
+		7390ADFC1DC9811400339AA5 /* DataCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataCenter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +74,8 @@
 				7331DAFA1DBD9E3B00BFBD71 /* JoinViewController.h */,
 				7331DAFB1DBD9E3B00BFBD71 /* JoinViewController.m */,
 				7331DAEC1DBD9E0700BFBD71 /* Main.storyboard */,
+				7390ADFB1DC9811400339AA5 /* DataCenter.h */,
+				7390ADFC1DC9811400339AA5 /* DataCenter.m */,
 				7331DAEF1DBD9E0700BFBD71 /* Assets.xcassets */,
 				7331DAF11DBD9E0700BFBD71 /* LaunchScreen.storyboard */,
 				7331DAF41DBD9E0700BFBD71 /* Info.plist */,
@@ -160,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7331DAEB1DBD9E0700BFBD71 /* ViewController.m in Sources */,
+				7390ADFD1DC9811400339AA5 /* DataCenter.m in Sources */,
 				7331DAE81DBD9E0700BFBD71 /* AppDelegate.m in Sources */,
 				7331DAFC1DBD9E3B00BFBD71 /* JoinViewController.m in Sources */,
 				7331DAE51DBD9E0700BFBD71 /* main.m in Sources */,
@@ -317,6 +323,7 @@
 				7331DAF91DBD9E0700BFBD71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -28,7 +28,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"3집.jpg"]];
 
     
     //My Login Page 글자
@@ -136,7 +135,7 @@
     
     UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     ViewController *join = [storyBoard instantiateViewControllerWithIdentifier:@"JoinViewController"];
-    [self.navigationController pushViewController:join animated:YES];
+    [self presentViewController:join animated:YES completion:nil];
 }
 
 

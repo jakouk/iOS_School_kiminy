@@ -18,8 +18,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"3집.jpg"]];
-    
     UILabel *pageName = [[UILabel alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2 - 100, 150, 200, 50)];
     pageName.text = @"Signup Page";
     pageName.textAlignment = NSTextAlignmentCenter;
