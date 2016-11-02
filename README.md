@@ -39,6 +39,7 @@
 - [Day31. AlertController](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day31_UIAlertController.md)
 - [Day32. Singleton](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day32_singletone.md)
 - [Day33. NSNotification](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day33_NSNotification.md)
+- [Day34. Typedef & static](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day34_Typedef_static.md)
 
 **iOS Frame Work**
 
