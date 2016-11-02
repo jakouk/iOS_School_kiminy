@@ -30,6 +30,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+//가입 버튼을 누르면 확인 
 -(IBAction)touchupInsideJoinButton:(UIButton *)sender {
     
     DataCenter *dataCenter = [DataCenter sharedData];

@@ -22,6 +22,7 @@
 
 @implementation MainViewController
 
+//cell이 될 NSMutableArray 초기화
 - (void)awakeFromNib
 {
     [super awakeFromNib];
@@ -36,11 +37,13 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
+    //노티 등록시킴 ( 세그먼트 변화 감지 )
     [super viewDidLoad];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didshouldChangeSelector:) name:@"noti" object:nil];
     // Do any additional setup after loading the view.
 }
 
+// 노티가 오면 실행되는 메서드
 - (void)didshouldChangeSelector:(NSNotification *)noti {
     NSDictionary *userInfo = [noti userInfo];
     
@@ -54,6 +57,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+//tableView의 셀 개수
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.cell.count;
 }
@@ -69,6 +73,7 @@
     return cell;
 }
 
+//tableView의 cell을 선택하면 실행됨.
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
@@ -77,6 +82,7 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+//추가 버튼을 누르면 NSMutableArray에 숫자를 추가하고 table를 reload함 
 - (IBAction)touchupInsideAddTableCell:(UIBarButtonItem *)sender {
     
     NSLog(@"touch Add button");

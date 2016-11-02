@@ -25,6 +25,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+//로그아웃 버튼을 누르면 자동로그인이 종료되면서 메인 화면으로 나감 .
 - (IBAction)touchupInsideLogOut:(UIButton *)sender {
     
     DataCenter *dataCenter = [DataCenter sharedData];
@@ -40,6 +41,7 @@
     [window makeKeyAndVisible];
 }
 
+//세그먼트값이 변화하면 그 정보를 노티를 통해서 전송함.
 - (IBAction)stepperChanged:(UISegmentedControl *)sender {
     
     NSNumber *number = [NSNumber numberWithInteger:sender.selectedSegmentIndex];
