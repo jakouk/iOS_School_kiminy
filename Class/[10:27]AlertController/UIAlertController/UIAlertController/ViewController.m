@@ -40,8 +40,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-
 - (IBAction)ToucthupInsideAlert:(id)sender {
     
     [self showAlertController:UIAlertControllerStyleAlert];
@@ -108,6 +106,8 @@
     self.touchCoordinate.text = [NSString stringWithFormat:@"(%lf, %lf)",coordinate.x,coordinate.y];
     
     return YES;
+    
+    
 }
 
 

@@ -19,6 +19,7 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didShouldChangedSelector:) name:@"noti" object:nil];
@@ -38,8 +39,6 @@
     
     self.Label3.textColor = fontColor;
     self.Label3.font = font;
-    
-    
 }
 
 - (void)didReceiveMemoryWarning {

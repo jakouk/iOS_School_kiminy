@@ -12,9 +12,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *previewLabel;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *sizeSegment;
 
-//@property CGFloat red;
-//@property CGFloat blue;
-//@property CGFloat green;
+
 @property (weak, nonatomic) IBOutlet UISlider *redSlider;
 @property (weak, nonatomic) IBOutlet UISlider *greenSlider;
 @property (weak, nonatomic) IBOutlet UISlider *blueSlider;
