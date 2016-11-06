@@ -17,6 +17,7 @@
 		7390AE261DC9841D00339AA5 /* DataCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7390AE251DC9841D00339AA5 /* DataCenter.m */; };
 		7390AE2A1DC98AB900339AA5 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7390AE291DC98AB900339AA5 /* MainViewController.m */; };
 		7390AE2D1DC9C64700339AA5 /* LogOutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7390AE2C1DC9C64700339AA5 /* LogOutViewController.m */; };
+		739E9E6F1DCB19B200757309 /* FriendList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 739E9E6E1DCB19B200757309 /* FriendList.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		7390AE291DC98AB900339AA5 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		7390AE2B1DC9C64700339AA5 /* LogOutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogOutViewController.h; sourceTree = "<group>"; };
 		7390AE2C1DC9C64700339AA5 /* LogOutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogOutViewController.m; sourceTree = "<group>"; };
+		739E9E6E1DCB19B200757309 /* FriendList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FriendList.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				7390AE251DC9841D00339AA5 /* DataCenter.m */,
 				7390AE2B1DC9C64700339AA5 /* LogOutViewController.h */,
 				7390AE2C1DC9C64700339AA5 /* LogOutViewController.m */,
+				739E9E6E1DCB19B200757309 /* FriendList.plist */,
 				7390AE161DC982FA00339AA5 /* Assets.xcassets */,
 				7390AE181DC982FA00339AA5 /* LaunchScreen.storyboard */,
 				7390AE1B1DC982FA00339AA5 /* Info.plist */,
@@ -161,6 +164,7 @@
 			files = (
 				7390AE1A1DC982FA00339AA5 /* LaunchScreen.storyboard in Resources */,
 				7390AE171DC982FA00339AA5 /* Assets.xcassets in Resources */,
+				739E9E6F1DCB19B200757309 /* FriendList.plist in Resources */,
 				7390AE151DC982FA00339AA5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,6 +341,7 @@
 				7390AE201DC982FA00339AA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
