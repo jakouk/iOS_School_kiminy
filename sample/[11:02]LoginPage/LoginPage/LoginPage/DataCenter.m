@@ -122,7 +122,7 @@
     NSMutableArray *userDatas = [[NSMutableArray alloc] init];
     
     if ( [dic objectForKey:@"userData"] != nil) {
-        [userDatas addObject:[dic objectForKey:@"userData"]];
+        [userDatas addObjectsFromArray:[dic objectForKey:@"userData"]];
     }
     
     [userDatas addObject:data];
