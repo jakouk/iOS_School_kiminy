@@ -40,6 +40,10 @@
 - [Day32. Singleton](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day32_singletone.md)
 - [Day33. NSNotification](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day33_NSNotification.md)
 - [Day34. Typedef & static](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day34_Typedef_static.md)
+- [Day35. Plist]
+- [Day36. Property & KVO]
+- [Day37. ARC]
+- [Day38. Block](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day38_Block.md)
 
 **iOS Frame Work**
 
