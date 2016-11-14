@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void(^playBlock)(NSInteger);
+typedef void(^ingBlock)(NSInteger);
 
 @interface SampleViewController : UIViewController
 
-- (void)myMethod:(playBlock)myNum;
-- (void)plsyMethod:(NSInteger)num;
+- (void)myMethod:(ingBlock)param;
+- (void)playMethod:(NSInteger)num;
 
 @end

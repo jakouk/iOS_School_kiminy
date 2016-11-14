@@ -10,7 +10,7 @@
 
 @interface SampleViewController ()
 
-@property playBlock testBlock;
+@property ingBlock playBlock;
 
 @end
 
@@ -26,14 +26,14 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)myMethod:(playBlock)myNum {
+- (void)myMethod:(ingBlock)myBlock {
     NSLog(@"start");
-    self.testBlock = myNum;
+    self.playBlock = myBlock;
     NSLog(@"end");
 }
 
-- (void)plsyMethod:(NSInteger)num {
-    self.testBlock(num);
+- (void)playMethod:(NSInteger)num {
+    self.playBlock(num);
 }
 
 

@@ -20,21 +20,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
-    self.sample = [SampleViewController new];
-    [self.sample myMethod:^(NSInteger num) {
-        NSLog(@"myMethod : %ld",num);
-    }];
-    
-}
 
-- (IBAction)touchupInsideBtn:(id)sender {
-    [self.sample plsyMethod:20];
+    self.sample = [[SampleViewController alloc] init];
+    [self.sample myMethod:^(NSInteger num) {
+        NSLog(@"ingBlock : %ld",num);
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)touchupInsideBtn:(id)sender {
+    [self.sample playMethod:30];
 }
 
 @end
