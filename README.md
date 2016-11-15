@@ -44,6 +44,8 @@
 - [Day36. Property & KVO]
 - [Day37. ARC]
 - [Day38. Block](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day38_Block.md)
+- [Day39. Thread]
+- [Day40. Network](https://github.com/jakouk/iOS_School_kiminy/blob/master/dayStudy/day40_Network.md)
 
 **iOS Frame Work**
 
