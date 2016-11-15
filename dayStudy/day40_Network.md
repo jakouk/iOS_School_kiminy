@@ -9,8 +9,8 @@
 ***
 #### 클라이언트 서버 모델 (Client-server-model)
  - Network architecture중 하나
-- Server : Client의 요청에 따라서 데이터를 제공해 주는 컴퓨터
-- Client : 서버로부터 요청한 데이터를 받는 컴퓨터
+ - Server : Client의 요청에 따라서 데이터를 제공해 주는 컴퓨터
+ - Client : 서버로부터 요청한 데이터를 받는 컴퓨터
  - 각각의 컴퓨터가 Client, Server의 역활에 맞게 구성되어 Network통신이 이뤄진다면 우린 이걸 클라이언트 서버 모델이라고 부를수 있다. 
 
 
@@ -22,8 +22,8 @@
 
 ### Rest
 ***
-  - REST(Representational State Transfer)는 월드 와이드 웹과 같은 분산 하이퍼미디어 시스템을 위한 소프트웨어 아키텍처의 한 형식이다. 
-  - 엄격한 의미로 REST는 네트워크 아키텍처 원리의 모음이다. 여기서 ‘네트워크 아키텍처 원리’란 자원을 정의하고 자원에 대한 주소를 지정하는 방법 전반을 일컫는다.
+ - REST(Representational State Transfer)는 월드 와이드 웹과 같은 분산 하이퍼미디어 시스템을 위한 소프트웨어 아키텍처의 한 형식이다. 
+ - 엄격한 의미로 REST는 네트워크 아키텍처 원리의 모음이다. 여기서 ‘네트워크 아키텍처 원리’란 자원을 정의하고 자원에 대한 주소를 지정하는 방법 전반을 일컫는다.
  - Resources : URI들은 쉽게 자원의 내용을 이해할수 있게 만들어야 한다. 
  - Representations :  객체와 속성을 나타내는 데어터와 JSON이나 XML구조로 전환해서 표현한다. 
  - Messages : HTTP Methods를 사용한다. ( for example, GET, POST, PUT, and DELETE).
