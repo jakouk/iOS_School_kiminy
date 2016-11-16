@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VNV-nS-1fN">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="PYt-Ol-DOz"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="title" id="igw-pY-05X">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" id="1Qn-jX-t8D"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Item" id="jIy-99-3jh">
+                                            <connections>
+                                                <action selector="touchupInsideImageInsertButton:" destination="BYZ-38-t0r" id="T50-pG-ZoI"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NNR-pq-0M2">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="NNR-pq-0M2" secondAttribute="trailing" id="3AQ-s1-a5h"/>
+                            <constraint firstItem="VNV-nS-1fN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="5Mw-X8-OsB"/>
+                            <constraint firstAttribute="trailing" secondItem="VNV-nS-1fN" secondAttribute="trailing" id="B7t-Mn-nKo"/>
+                            <constraint firstItem="NNR-pq-0M2" firstAttribute="top" secondItem="VNV-nS-1fN" secondAttribute="bottom" id="NzD-ep-BlX"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="NNR-pq-0M2" secondAttribute="bottom" id="fTY-dl-PtD"/>
+                            <constraint firstItem="NNR-pq-0M2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="iFD-7O-LNw"/>
+                            <constraint firstItem="VNV-nS-1fN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="nU7-Eq-VwK"/>
+                            <constraint firstItem="NNR-pq-0M2" firstAttribute="top" secondItem="VNV-nS-1fN" secondAttribute="bottom" id="vK1-Zt-8s0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageTableView" destination="NNR-pq-0M2" id="UtH-c9-ZgV"/>
+                        <outlet property="navigationBar" destination="VNV-nS-1fN" id="km2-tj-zT1"/>
+                        <outlet property="navigationTitle" destination="igw-pY-05X" id="Mng-cl-vcM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
