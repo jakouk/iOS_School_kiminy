@@ -31,6 +31,7 @@
              NSLog(@"response %@, error %@",response,error);
              NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:&error];
              self.list = dic;
+             [[NSNotificationCenter defaultCenter] postNotificationName:@"noti" object:nil userInfo:nil];
         }
     }];
     [getDataTask resume];
@@ -47,7 +48,9 @@
     NSMutableData *body = [NSMutableData data];
     
     [body appendData:[[NSString stringWithFormat:@"\r\n--%@\r\n",boundary] dataUsingEncoding:NSUTF8StringEncoding]];
-    
+    [body appendData:[[NSString stringWithFormat:@"Content-Disposition:form-data; name=\"photo\"; filename\"%@.jpg\"r\n",image] dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:[@"Content-Type: application/octet-stream\r\n\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:[NSData dataWithData:UIImageJPEGRepresentation(image, 0.1)]];
     
     
     request.HTTPBody = [boundary dataUsingEncoding:NSUTF8StringEncoding];
@@ -55,6 +58,8 @@
     NSURLSessionUploadTask *postDataTask = [session uploadTaskWithRequest:request fromData:nil completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         
     }];
+    
+    [postDataTask resume];
     
     
     

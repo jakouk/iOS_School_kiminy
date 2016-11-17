@@ -16,6 +16,7 @@
 		73491D841DD9C8DB00875A61 /* jeny.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 73491D831DD9C8DB00875A61 /* jeny.jpeg */; };
 		73521F001DDA8FAA00198BD1 /* customCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 73521EFE1DDA8FAA00198BD1 /* customCellTableViewCell.m */; };
 		73521F011DDA8FAA00198BD1 /* customCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73521EFF1DDA8FAA00198BD1 /* customCellTableViewCell.xib */; };
+		73521F611DDC58B700198BD1 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 73521F601DDC58B700198BD1 /* placeholder.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		73521EFD1DDA8FAA00198BD1 /* customCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = customCellTableViewCell.h; sourceTree = "<group>"; };
 		73521EFE1DDA8FAA00198BD1 /* customCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = customCellTableViewCell.m; sourceTree = "<group>"; };
 		73521EFF1DDA8FAA00198BD1 /* customCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = customCellTableViewCell.xib; sourceTree = "<group>"; };
+		73521F601DDC58B700198BD1 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				73521EFD1DDA8FAA00198BD1 /* customCellTableViewCell.h */,
 				73521EFE1DDA8FAA00198BD1 /* customCellTableViewCell.m */,
 				73521EFF1DDA8FAA00198BD1 /* customCellTableViewCell.xib */,
+				73521F601DDC58B700198BD1 /* placeholder.png */,
 				73491D831DD9C8DB00875A61 /* jeny.jpeg */,
 				73491D751DD9AA8D00875A61 /* Main.storyboard */,
 				73491D781DD9AA8D00875A61 /* Assets.xcassets */,
@@ -149,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				73491D7C1DD9AA8D00875A61 /* LaunchScreen.storyboard in Resources */,
+				73521F611DDC58B700198BD1 /* placeholder.png in Resources */,
 				73491D791DD9AA8D00875A61 /* Assets.xcassets in Resources */,
 				73491D841DD9C8DB00875A61 /* jeny.jpeg in Resources */,
 				73521F011DDA8FAA00198BD1 /* customCellTableViewCell.xib in Resources */,

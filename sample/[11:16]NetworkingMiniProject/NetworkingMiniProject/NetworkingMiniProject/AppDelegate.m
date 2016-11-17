@@ -1,8 +1,8 @@
 //
 //  AppDelegate.m
-//  Networking
+//  NetworkingMiniProject
 //
-//  Created by jakouk on 2016. 11. 15..
+//  Created by jakouk on 2016. 11. 16..
 //  Copyright © 2016년 jakouk. All rights reserved.
 //
 
@@ -16,7 +16,6 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
     // Override point for customization after application launch.
     return YES;
 }

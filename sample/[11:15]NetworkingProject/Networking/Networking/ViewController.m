@@ -31,21 +31,35 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Do any additional setup after loading the view, typically from a nib.
     self.imageTableView.delegate = self;
     self.imageTableView.dataSource = self;
+    
+    self.object = [RequestObject sharedUserResqusetObject];
+    [self.object requestImageList];
+    
+    // Do any additional setup after loading the view, typically from a nib.
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tableViewReloadData) name:@"noti" object:nil];
+    
 }
 
 //화면 실행되면서 alert 확인
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:YES];
     [self alertIdCheck];
+}
+
+//tableView ReloadData
+- (void)tableViewReloadData {
     
     self.object = [RequestObject sharedUserResqusetObject];
     self.userData = [[NSMutableArray alloc] init];
-    NSLog(@"viewDidAppear %@",self.object.list);
+    NSLog(@"tableViewReloadData %@",self.object.list);
     self.userData = [self.object.list objectForKey:@"list"];
-    [self.imageTableView reloadData];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.imageTableView reloadData];
+    });
+ 
 }
 
 //유저 ID

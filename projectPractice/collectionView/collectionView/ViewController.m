@@ -29,8 +29,6 @@
     
 }
 
-
-
 // Section for Item Count...
 - (NSInteger) collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return 15;
@@ -59,7 +57,7 @@
     
     UIImageView *imgView = [[UIImageView alloc] initWithFrame:cell.contentView.frame];
     [imgView setFrame:CGRectMake(0, 0, cell.frame.size.width, cell.frame.size.height)];
-    imgView.image = [UIImage imageNamed:@"jeny.jpeg"];
+    imgView.image = [UIImage imageNamed:@"placeholder.png"];
     [cell.contentView addSubview:imgView];
     
     UILabel *lable = [[UILabel alloc] initWithFrame:CGRectMake(0, 70, 100, 30)];
