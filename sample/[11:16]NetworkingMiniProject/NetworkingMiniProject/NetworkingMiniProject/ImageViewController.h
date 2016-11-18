@@ -10,4 +10,6 @@
 
 @interface ImageViewController : UIViewController
 
+@property UIImage *imageCell;
+
 @end

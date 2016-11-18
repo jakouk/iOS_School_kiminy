@@ -42,7 +42,6 @@
             [[NSNotificationCenter defaultCenter] postNotificationName:notificationName object:nil];
         });
     };
-    
     NSURLSession *session = [NSURLSession sharedSession];
     NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:taskHandler
     ];
@@ -134,6 +133,32 @@
     NSURLSessionUploadTask *uploadTask = [session uploadTaskWithRequest:request fromData:nil completionHandler:uploadHandler];
     
     [uploadTask resume];
+}
+
++ (void)requestDeleteImage:(NSString *)imageId {
+    
+    NSString *userId = [[UserInformation sharedUserInformation] userId];
+    NSString *destinationURLString = [NSString stringWithFormat:@"http://iosschool.yagom.net:8080/api/image?user_id=%@&image_id=%@",userId,imageId];
+    
+    NSURL *destinationURL = [NSURL URLWithString:destinationURLString];
+    
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc]init];
+    [request setHTTPMethod:@"DELETE"];
+    [request setURL:destinationURL];
+    
+    id taskHandler =^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        NSError *jsonParsingError;
+        NSDictionary *jsonResult = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:&jsonParsingError];
+        NSLog(@"json parsing error : %@, json result : %@",jsonParsingError,jsonResult);
+        
+        NSString *mid = jsonResult[@"mid"];        
+        if ([mid isEqualToString:@"DELETE_IMAGE"]) {
+            [self requestImageList];
+        }
+    };
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:taskHandler];
+    [dataTask resume];
 }
 
 @end

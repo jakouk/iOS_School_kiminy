@@ -17,6 +17,8 @@
 static NSString *const ImageListUpdateNotification = @"ImageListUpdated";
 static NSString *const ImageListUpdatefailNotification = @"ImageListUpdateFail";
 
+static NSString *const ImageCellSelectNotification = @"ImageCellSelect";
+
 #import "RequestObject.h"
 #import "UserInformation.h"
 

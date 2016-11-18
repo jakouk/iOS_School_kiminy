@@ -12,5 +12,6 @@
 
 + (void)requestImageList;
 + (void)requestUploadImage:(UIImage *)image title:(NSString *)title;
++ (void)requestDeleteImage:(NSString *)imageId;
 
 @end

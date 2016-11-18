@@ -7,6 +7,7 @@
 //
 
 #import "ImageTableViewController.h"
+#import "ImageViewController.h"
 
 @interface ImageTableViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
@@ -83,7 +84,6 @@
             [RequestObject requestImageList];
         }
     };
-    
     UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"확인" style:UIAlertActionStyleDefault handler:okHandler];
     [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
         textField.placeholder = @"사진제목 입력";
@@ -98,9 +98,6 @@
     [picker dismissViewControllerAnimated:YES completion:^{
         [self presentViewController:alert animated:YES completion:nil];
     }];
-    
-    
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -149,9 +146,9 @@
         UIImage *image = [UIImage imageWithData:data];
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            cell.imageView.image = image;
-//            UITableViewCell *cellForUpdate = [tableView cellForRowAtIndexPath:indexPath];
-//            cellForUpdate.imageView.image = image;
+//            cell.imageView.image = image;
+            UITableViewCell *cellForUpdate = [tableView cellForRowAtIndexPath:indexPath];
+            cellForUpdate.imageView.image = image;
         });
     };
     NSURLSession *session = [NSURLSession sharedSession];
@@ -159,7 +156,6 @@
     
     [dataTask resume];
     cell.textLabel.text = imageTitle;
-   
     
     return cell;
 }
@@ -179,15 +175,31 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
         //[tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-        
-        //requestDeleteImage
+    
+        NSDictionary *imageInfoDic = [[[UserInformation sharedUserInformation] imageInfoList] objectAtIndex:indexPath.row];
+        NSString *imageId = imageInfoDic[@"id"];
+        [RequestObject requestDeleteImage:imageId];
         
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    UIImage *cellImage = cell.imageView.image;
+    //NSDictionary *userInfo = [NSDictionary dictionaryWithObject:cellImage forKey:@"image"];
+    
+    [self performSegueWithIdentifier:@"cellImage" sender:cellImage];
+}
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([segue.identifier isEqualToString:@"cellImage"]) {
+        ImageViewController *nextVC = (ImageViewController *)segue.destinationViewController;
+        nextVC.imageCell = (UIImage *)sender;
+    }
+}
 /*
 // Override to support rearranging the table view.
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
