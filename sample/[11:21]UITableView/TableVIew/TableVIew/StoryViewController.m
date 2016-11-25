@@ -78,7 +78,6 @@
             UIImage *image = [UIImage imageWithData:data];
             if (image) {
                 dispatch_sync(dispatch_get_main_queue(), ^{
-                    NSLog(@"%@",image);
                     self.cellImage = image;
                     [_mainTableView reloadData];
                 });
