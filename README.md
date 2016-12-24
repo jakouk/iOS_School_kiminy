@@ -49,15 +49,6 @@
 
 **iOS Frame Work**
 
-
-### HomeWork
-
-### Group_Study
-
-### Quiz
-
-### Sample
-
 ### SoftWareEngineer
 ***
 - [Day1. SoftWareEngineer](https://github.com/jakouk/iOS_School_kiminy/blob/master/SoftwareEngineering/Day1_SoftwareEngineering.md)
